@@ -47,7 +47,8 @@
 	clear: both;
 }
 .col02{
-	float: 1.6666%;
+	float: left;
+	width: 1.6666%;
 }
 .col045{
 	float: left;
@@ -128,6 +129,10 @@
 .col111{
 	float: left;
 	width: 92.49999%;
+}
+.col1106{
+	float: left;
+	width: 96.66666%;
 }
 .col12{
 	float: left;
