@@ -13,8 +13,8 @@
 		<div class="infoAdicional">
 			<div class="col4"><img src="img/casa.png" class="telefono"/>&nbsp;Luis Tayer Ojeda 183, Of 304. Providencia</div>
 			<div class="col2"><img src="img/telefono.png" class="telefono"/>&nbsp;(02) 23333 218</div>
-			<div class="col3"><img src="img/mail.png" class="telefono"/>&nbsp;Hora de Atencion : 10:30 a 18:30 Hrs</div>
-			<div class="col3"><img src="img/reloj.png" class="telefono"/>&nbsp;&nbsp;contacto@cuponperfumes.cl</div>
+			<div class="col3"><img src="img/reloj.png" class="telefono"/>&nbsp;Hora de Atencion : 10:30 a 18:30 Hrs</div>
+			<div class="col3"><img src="img/mail.png" class="telefono"/>&nbsp;&nbsp;contacto@cuponperfumes.cl</div>
 		</div>
 	</div>
 </div>

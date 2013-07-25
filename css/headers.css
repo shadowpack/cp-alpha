@@ -64,7 +64,7 @@
 	background: url('../img/tweed.png');
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
-	height: 35px;
+	height: 32px;
 	cursor: pointer;
 	z-index: 5;
 }
@@ -190,7 +190,7 @@
 }
 #forgotPassword{
 	position: absolute;
-	top:117px;
+	top:107px;
 	left: 5%;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 11px;
@@ -198,6 +198,18 @@
 	cursor: pointer;
 }
 #forgotPassword:hover{
+	text-decoration: underline;
+}
+#createPassword{
+	position: absolute;
+	top:125px;
+	left: 5%;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	color: #09C;
+	cursor: pointer;
+}
+#createPassword:hover{
 	text-decoration: underline;
 }
 .login_btn{

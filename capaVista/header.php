@@ -51,6 +51,7 @@
     <input type="text" id="user" class="input" placeholder="E-Mail"/>
     <input type="password" id="password" class="input" placeholder="Password"/>
     <div id="forgotPassword">¿Has olvidado tu password?</div>
+    <div id="createPassword">¿No tienes Cuenta?</div>
     <input type="button" id="login" class="login_btn" value="Ingresar"/>
 </div>
 <!-- FORMULARIO MODAL DE REGISTRO -->
@@ -58,50 +59,48 @@
 	<div id="regClose"></div>
 	<div id="regBody">
 		<div class="RowContainer12fixed">
-			<div class="row">
-				<div class="col12"><div class="titleDiv"><img src="img/img-form-reg.png" class="regImgTitle"/><div class="regTitle">Registra una cuenta en CuponPerfumes</div></div></div>
-				<div class="first col12"><div class="regEsp">&nbsp;</div></div>
-				<div id="regDatum">
-					<div class="first col6"><div class="inputdiv"><input type="text" placeholder="Nombre Completo" class="inputReg" id="regName"/></div></div>
-					<div class="col6">
-						<div class="col1">&nbsp;</div>
-						<div class="col11">
-						<div class="inputdiv"><input type="text" placeholder="Direccion" class="inputReg" id="regLocation"/></div>
-						</div>
+			<div class="col12"><div class="titleDiv"><img src="img/img-form-reg.png" class="regImgTitle"/><div class="regTitle">Registra una cuenta en CuponPerfumes</div></div></div>
+			<div class="first col12"><div class="regEsp">&nbsp;</div></div>
+			<div id="regDatum">
+				<div class="first col6"><div class="inputdiv"><input type="text" placeholder="Nombre Completo" class="inputReg" id="regName"/></div></div>
+				<div class="col6">
+					<div class="col1">&nbsp;</div>
+					<div class="col11">
+					<div class="inputdiv"><input type="text" placeholder="Direccion" class="inputReg" id="regLocation"/></div>
 					</div>
-					<div class="first col6"><div class="inputdiv"><input type="text" placeholder="Comuna" class="inputReg" id="regComuna"/></div></div>
-					<div class="col6">
-						<div class="col1">&nbsp;</div>
-						<div class="col11">
-						<div class="inputdiv"><input type="text" placeholder="Ciudad" class="inputReg" id="regCity"/></div>
-						</div>
-					</div>
-					<div class="first col12"><div class="inputdiv">
-						<select class="optionReg" id="regGenero"/>
-							<option value="0">Genero</option>
-							<option value="1">Masculino</option>
-							<option value="2">Femenino</option>
-						</select>
-					</div></div>
-					<div class="first col12"><div class="inputdiv"><input type="text" placeholder="E-Mail" class="inputReg" id="regEmail"/></div></div>
-					<div class="first col12"><div class="inputdiv"><input type="password" placeholder="Contraseña" class="inputReg" id="regPassword"/></div></div>
-					<div class="first col12"><div class="inputdiv"><input type="password" placeholder="Repite tu Contraseña" class="inputReg" id="regRePassword"/></div></div>
-					<div class="first col12"><div class="checkDiv"><input type="checkbox" id="checkReg"/><div id="reg-checkReg">Acepto las condiciones y la política de privacidad</div></div></div>
-					<div class="first col12"><div class="btndiv"><input type="button" id="btnReg" value="Registrar"/></div></div>
 				</div>
-				<div id="postDatum">
-					<div class="col12">
-						<div class="postDatum-text">Felicitaciones, te has registrado con exito en CuponPerfumes.cl</br></br>
-							Como ultimo paso te hemos enviado un correo con instrucciones para activar tu cuenta.</br>
-							</br> 
-							Equipo CuponPerfumes.cl
+				<div class="first col6"><div class="inputdiv"><input type="text" placeholder="Comuna" class="inputReg" id="regComuna"/></div></div>
+				<div class="col6">
+					<div class="col1">&nbsp;</div>
+					<div class="col11">
+					<div class="inputdiv"><input type="text" placeholder="Ciudad" class="inputReg" id="regCity"/></div>
+					</div>
+				</div>
+				<div class="first col12"><div class="inputdiv">
+					<select class="optionReg" id="regGenero"/>
+						<option value="0">Genero</option>
+						<option value="1">Masculino</option>
+						<option value="2">Femenino</option>
+					</select>
+				</div></div>
+				<div class="first col12"><div class="inputdiv"><input type="text" placeholder="E-Mail" class="inputReg" id="regEmail"/></div></div>
+				<div class="first col12"><div class="inputdiv"><input type="password" placeholder="Contraseña" class="inputReg" id="regPassword"/></div></div>
+				<div class="first col12"><div class="inputdiv"><input type="password" placeholder="Repite tu Contraseña" class="inputReg" id="regRePassword"/></div></div>
+				<div class="first col12"><div class="checkDiv"><input type="checkbox" id="checkReg"/><div id="reg-checkReg">Acepto las condiciones y la política de privacidad</div></div></div>
+				<div class="first col12"><div class="btndiv"><input type="button" id="btnReg" value="Registrar"/></div></div>
+			</div>
+			<div id="postDatum">
+				<div class="col12">
+					<div class="postDatum-text">Felicitaciones, te has registrado con exito en CuponPerfumes.cl</br></br>
+						Como ultimo paso te hemos enviado un correo con instrucciones para activar tu cuenta.</br>
+						</br> 
+						Equipo CuponPerfumes.cl
 
-						</div>
 					</div>
-					<div class="col12">&nbsp;</div>
-					<div class="col12">
-						<img src="img/landind_logo.png"/>
-					</div>
+				</div>
+				<div class="col12">&nbsp;</div>
+				<div class="col12">
+					<img src="img/landind_logo.png"/>
 				</div>
 			</div>
 		</div>
@@ -161,10 +160,20 @@
                 $("#joinModal").appendTo('body');
                 $("#joinModal").fadeIn();
                 $(this).data('active', true);
+                $("#joinModal").mouseleave(function(){
+		        	$(document).click(function(){
+						$("#joinModal").fadeOut();
+						$("#join").data('active',false);
+						$(document).unbind();
+						$("#joinModal").unbind();
+					});
+		        }).mouseenter(function(){
+		        	$(document).unbind();
+		        })
             }
-        });
+        })
         //EVENTO DE CLICK DEL BOTON REGISTRAR
-        $("#reg").click(function(){
+        $("#createPassword").click(function(){
             var action = new $.esential();
             action.modalWindows($(".regModal"), $("#regClose"));
             $("#regDatum").show();

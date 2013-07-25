@@ -37,7 +37,7 @@ $.item = function(settings){
 		//FIN DIVS PRINCIPALES
 		// SUBCAPAS
 		var title = $('<div></div>').addClass("title").appendTo(header).html(atributos.nombre);
-		var social = $('<div></div>').addClass("social").appendTo(header).html('<div class="fb-like" data-href="http://developers.facebook.com/docs/reference/plugins/like" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>');
+		var social = $('<div></div>').addClass("social").appendTo(header).html('<div class="fb-like" data-href="http://www.cuponperfumes.cl/product?id='+atributos.id+'" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>');
 		var footerLeft = $('<div></div>').addClass("footerLeft").appendTo(footer);
 			var microTitle = $('<div></div>').addClass("microTitle").appendTo(footerLeft).html(atributos.descripcion_small);
 			var logo = $('<div></div>').addClass("logo").appendTo(footerLeft);
@@ -46,8 +46,11 @@ $.item = function(settings){
 				var text = $('<div></div>').addClass("text").appendTo(info);
 					var descuento = $('<div></div>').addClass("descuento").appendTo(text).html(atributos.descuento +"%");
 					var hora = $('<div></div>').addClass("hora").appendTo(text).html(getHora(atributos.tiempo));
-					var precio = $('<div></div>').addClass("precioReal").appendTo(text).html("$"+atributos.precio);
-				var precioDescuento = $('<div></div>').addClass("precioDescuento").appendTo(info).html("$"+atributos.precio_d);
+					var t = self.setInterval(function(){
+						hora.html(getHora(atributos.tiempo));
+					},1000)
+					var precio = $('<div></div>').addClass("precioReal").appendTo(text).html("$"+num_format(atributos.precio));
+				var precioDescuento = $('<div></div>').addClass("precioDescuento").appendTo(info).html("$"+num_format(atributos.precio_d));
 				var boton = $('<div></div>').addClass("boton").appendTo(info).html('Ver Mas').click(function(){
 					location.href="product.php?id="+atributos.id;
 				});
