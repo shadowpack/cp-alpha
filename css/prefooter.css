@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+.prefooter{
+	height: 250px;
+	overflow: hidden;
+}
+.prefooter .prefooterDiv{
+	height: 210px;
+}
+.prefooter .bordertop{
+	border-top:1px #666666 dashed;
+}
+.prefooter .logo{
+	position: relative;
+	height: 100%;
+	width: 95%;
+	top: 0px;
+	left: 0px;
+	background: #FFF;
+	left: 50%;
+	margin-left: -47.5%;
+	border: 1px #CCC solid;
+	box-shadow: 1px 1px 1px #CCC;
+	-moz-box-shadow:1px 1px 1px #CCC;
+	-webkit-box-shadow: 1px 1px 1px #CCC;
+}
+.prefooter .webpay{
+	position: absolute;
+	top:50%;
+	height: 50%;
+	margin-top: -12.5%;
+	width: 70%;
+	left: 50%;
+	margin-left: -35%;
+}
+.prefooter .facebook{
+	position: absolute;
+	top:50%;
+	margin-top: -20%;
+	height: 50%;
+	width: 40%;
+	left: 50%;
+	margin-left: -20%;
+}
+.prefooter .twitter{
+	position: absolute;
+	top:50%;
+	margin-top: -17.5%;
+	height: 35%;
+	width: 30%;
+	left: 50%;
+	margin-left: -15%;
+}
+.prefooter .logo .border{
+	border: 1px #333 solid;
+	border-radius: 5px;
+}

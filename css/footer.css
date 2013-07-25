@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+.prefooter{
+	height: 20px;
+}
+.midlefooter{
+	height: 60px;
+	background:url('../img/binding_dark.png');
+	border-bottom:none;
+	border-top:none;
+}
+.botfooter{
+	height: 70px;
+	background:url('../img/binding_dark.png');
+	border-bottom:none;
+	border-top:none;
+}
+.subfooter{
+	height: 15px;
+	background: url('../img/binding_dark.png');
+}
+.subfooter2{
+	height: 2px;
+	background: #ff8000;
+}
+.subfooter3{
+	height: 1px;
+	background: #00b200;
+}
+.midlefooter .telefono{
+	position: relative;
+	top:4px;
+}
+.midlefooter .infoAdicional{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	color: #09C;
+	font-size: 14px;
+	line-height: 60px;
+	vertical-align: middle;
+	font-family:Verdana, Geneva, sans-serif;
+	height: 100%;
+	font-weight: 500;
+}
+.footer{
+	position: relative;
+	height: 110px;
+	background:url('../img/binding_dark.png');
+	border-bottom:none;
+	border-top:none;
+	color:#FFF;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+.footer .footercol{
+	height: 100%;
+}
+.footer .coltext{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.footer .colimg{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+.footer .footertext{
+	position:relative;
+	margin:5px 15px 15px 15px;
+}
+.footer .nobold{
+	position: relative;
+	top:0px;
+	font-weight:normal;
+	font-size:11px;
+	color:#CCC;
+}
+.footer .logobot{
+	position: relative;
+	top:10px;
+	left:30px;
+}
+.botfooter .logopago{
+	position: relative;
+	top:15px;
+}
+.footer .leftdashed{
+	border-left: 1px #CCC dotted;
+	height: 100%;
+}
+.footer .rightdashed{
+	border-right: 1px #CCC dotted;
+	height: 100%;
+}
+.footer .subtitle{
+	position: relative;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color:#09C;
+	font-weight: 100;
+	left: 40px;
+	line-height: 30px;
+	vertical-align:bottom;
+}
+.footer .bajadaSimple{
+	position: relative;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color:#CCC;
+	font-weight: 100;
+	left: 40px;
+}
+.footer .transbank{
+	position: relative;
+	height: 100px;
+	left: 30px;
+	top:10px;
+}
+.footer .redesSociales{
+	position: relative;
+	top:25px;
+	left: 30px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight: 100;
+	color:#09C;
+}
+.footer .bajadaRedes{
+	line-height: 30px;
+}
+

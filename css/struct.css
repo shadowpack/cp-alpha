@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+.RowContainer12fixed{
+	position: absolute;
+	width: 100%;
+	top:0px;
+	left: 0px;
+}
+.RowContainer12{
+	position: absolute;
+	width: 100%;
+	min-width: 960px;
+	top:0px;
+	left: 0px;
+}
+.hasPlaceholder { color: #777; }
+.divAll{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	top:0%;
+	left:0%;
+}
+.rowAll{
+	position: relative;
+	width: 100%;
+	left: 50%;
+	margin-left: -50%;
+}
+/*.row{
+	position: relative;
+	width: 80%;
+	left: 50%;
+	margin-left: -40%;
+}*/
+.row{
+	position: relative;
+	width: 1460px;
+	left:50%;
+	margin-left: -730px;
+}
+.border{
+	border-left: 1px #999 solid;
+	border-right: 1px #999 solid;
+}
+.first{
+	clear: both;
+}
+.col02{
+	float: 1.6666%;
+}
+.col045{
+	float: left;
+	width: 3.74999%;
+}
+.col06{
+	float: left;
+	width: 5%;
+}
+.col1{
+	float: left;
+	width: 8.3333%;
+}
+.col15{
+	float: left;
+	width: 12.4999%;
+}
+.col1-2{
+	float: left;
+	width: 10%;
+}
+.col2{
+	float: left;
+	width: 16.6666%;
+}
+.col26{
+	float: left;
+	width: 22.2216%;
+}
+.col24{
+	float: left;
+	width: 19.9999%;
+}
+.col3{
+	float: left;
+	width: 25%;
+}
+.col333{
+	float: left;
+	width: 27.7774%;
+}
+.col4{
+	float: left;
+	width: 33.3333%;
+}
+.col5{
+	float: left;
+	width: 41.6666%;
+}
+.col6{
+	float: left;
+	width: 50%;
+}
+.col7{
+	float: left;
+	width: 58.3333%;
+}
+.col8{
+	float: left;
+	width: 66.6666%;
+}
+.col9{
+	float: left;
+	width: 75%;
+}
+.col10{
+	float: left;
+	width: 83.3333%;
+}
+.col108{
+	float: left;
+	width: 90%;
+}
+.col11{
+	float: left;
+	width: 91.6666%;
+}
+.col111{
+	float: left;
+	width: 92.49999%;
+}
+.col12{
+	float: left;
+	width: 100%;
+}

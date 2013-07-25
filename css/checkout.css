@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+.checkoutRow{
+	height: 40px;
+}
+.checkoutRow2{
+	height: 20px;
+}
+.checkoutDel{
+	height: 60px;
+}
+.checkoutBot{
+	height: 80px;
+}
+.checkout{
+	height: 100%;
+}
+.checkout .checkoutDelivery{
+	position: relative;
+	height: 100%;
+	border: 1px #CCC solid;
+	border-top: none;
+	background: #FFF;
+}
+.checkout .checkoutBodyTop{
+	position: relative;
+	height: 100%;
+	border: 1px #CCC solid;
+	border-bottom: none;
+	background: #FFF;
+}
+.checkout .checkoutBody{
+	position: relative;
+	height: 100%;
+	border: 1px #CCC solid;
+	border-top: none;
+	border-bottom: none;
+	background: #FFF;
+}
+.checkout .detalle{
+	position: relative;
+	height: 30px;
+	width: 80%;
+	left: 50%;
+	margin-left: -10%;
+}
+.checkout .detallecol{
+	position: relative;
+	height: 30px;
+}
+.checkout .checkoutFoot{
+	position: relative;
+	height: 80px;
+	border-top: 1px #CCC dashed;
+	border-left: 1px #CCC solid;
+	border-right: 1px #CCC solid;
+	border-bottom: 1px #CCC solid;
+	background: #FFF;
+}
+.checkout .btnPago{
+	position: relative;
+	top: 20px;
+	height: 35px;
+	width: 150px;
+	border: 1px #999 solid;
+	width: 85%;
+	color: #FFF;
+	line-height: 35px;
+	vertical-align: middle;
+	font-size: 16px;
+	font-family:Arial, Geneva, sans-serif;
+	text-align: center;
+	background: -webkit-linear-gradient(top, #BAFF8C, #499300);
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.checkout .spanTotal{
+	position: relative;
+	height: 80px;
+	line-height: 80px;
+	vertical-align: middle;
+	color: #666;
+	font-size: 26px;
+	font-family:Arial, Geneva, sans-serif;
+}
+.checkout .radioDelivery{
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	color: #666;
+	font-size: 18px;
+	font-family:Arial, Geneva, sans-serif;
+}
+.checkout .precio{
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+	vertical-align: middle;
+	font-size: 18px;
+	font-family:Arial, Geneva, sans-serif;
+}
+.checkout .locationDel{
+	position: relative;
+	height: 60px;
+}
+.checkout .direccionDelivery{
+ 	position: relative; 
+	height: 30px;
+	width: 600px;
+}
+.checkout .textDel{
+	position: relative;
+	height: 30px;
+	line-height: 20px;
+	color: #666;
+	vertical-align: middle;
+	font-size: 16px;
+	font-family:Arial, Geneva, sans-serif;
+}
+.checkout #locationsDel{
+	position: relative;
+	height: 90px;
+	display: none;
+}
+.checkout #locationsSelect{
+	position: relative;
+	height: 50px;
+}
+.checkout .imgRemove{
+	position: relative;
+	top:3.5px;
+	cursor: pointer;
+}
+.checkout .webpayImg{
+	position: relative;
+	top:10px;
+}
+.checkout #pagoOption{
+	position: relative;
+	top:-13px;
+}
+.checkout .payForm{
+	display: hidden;
+}

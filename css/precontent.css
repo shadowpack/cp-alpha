@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+.precontent{
+	position: relative;
+	height: 190px;
+	background: url('../img/tweed.png');
+}
+.precontent .subline{
+	height: 1px;
+	background: #ff8000;
+}
+.imagesSlider3{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.imagesSlider3 .imagelider{
+	position: relative;
+	text-align: center;
+	height: 100%;
+}
+.imagesSlider3 .btn_prev{
+	position: absolute;
+	top:50%;
+	margin-top: -38px;
+	cursor: pointer;
+	overflow: hidden;
+}
+.imagesSlider3 .btn_next{
+	position: absolute;
+	top:50%;
+	margin-top: -38px;
+	right: 0px;
+	cursor: pointer;
+}
+.imagesSlider3 .imagesMov{
+	position: relative;
+	top:20px;
+	height: 150px;
+	overflow: hidden;
+}
+.imagesSlider3 .imageItem{
+	float: left;
+	left: 2.5%;
+	width: 33.3333%;
+	text-align: center;
+}

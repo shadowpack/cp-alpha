@@ -1,0 +1,220 @@
+@charset "utf-8";
+/* CSS Document */
+.product{
+	position: relative;
+}
+.product .img{
+	height: 100%;
+}
+.productS{
+	position: relative;
+	height: 350px;
+}
+.product .bordercol{
+	border: 1px #CCC solid;
+	background: #FFF;
+	height: 100%;
+}
+/*SLIDER*/
+.product .sliderImg{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	border-right: 1px #CCC dotted;
+	overflow: hidden;
+}
+.product .imgSlider{
+	float: left;
+	height: 100%;
+	width: 100%;
+}
+.product .imgSlider .imgItem{
+	height: 100%;
+	width: 100%;
+}
+.product .btn_prev{
+	position: absolute;
+	top:50%;
+	margin-top: -38px;
+	cursor: pointer;
+}
+.product .btn_next{
+	position: absolute;
+	top:50%;
+	margin-top: -38px;
+	right: 0px;
+	cursor: pointer;
+}
+/*FIN SLIDER*/
+/*DESCRIPCION*/
+.product .datos{
+	position: relative;
+	height: 100%;
+}
+.product .pretitulo{
+	position: relative;
+	height: 10%;
+}
+.product .titulo{
+	position: relative;
+	text-align: center;
+	color: #666;
+	font-size: 25px;
+	font-weight: bold;
+	font-family:Arial, Geneva, sans-serif;
+	height: 15%;
+}
+.product .bajada{
+	position: relative;
+	text-align: center;
+	color: #666;
+	font-size: 14px;
+	font-family:Arial, Geneva, sans-serif;
+	height:20%;
+}
+.product .precio{
+	position: relative;
+	height:30%;
+}
+.product .precio .precioD{
+	color: #09C;
+	font-family:Arial, Geneva, sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+}
+.product .precio .precioR{
+	color: #666;
+	font-family:Arial, Geneva, sans-serif;
+	font-size: 18px;
+	text-decoration: line-through;
+}
+.product .precio .tiempo{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.product .precio .tiempo #reloj{
+	position: absolute;
+	left: 0px;
+	width:15%;
+}
+.product .precio .tiempo #relojT{
+	position: absolute;
+	left: 15%;
+	width: 85%;
+	color: #666;
+	font-size: 16px;
+	font-family:Arial, Geneva, sans-serif;
+}
+.product .precio .tiempo #compra{
+	position: relative;
+	top: 35px;
+	height: 35px;
+	width: 150px;
+	border: 1px #999 solid;
+	width: 85%;
+	color: #FFF;
+	line-height: 35px;
+	vertical-align: middle;
+	font-size: 16px;
+	font-family:Arial, Geneva, sans-serif;
+	text-align: center;
+	background: -webkit-linear-gradient(top, #BAFF8C, #499300);
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.product .foot{
+	position: relative;
+	border-top: 1px #CCC dotted;
+	height:25%;
+}
+.product .footP{
+	position: relative;
+	height: 50%;
+}
+.product .sell{
+	line-height: 48px;
+	font-size: 16px;
+	font-family:Arial, Geneva, sans-serif;
+	color: #666;
+	vertical-align: middle;
+}
+.product .social{
+	position: relative;
+	font-size: 16px;
+	height: 50%;
+	font-family:Arial, Geneva, sans-serif;
+	color: #666;
+	vertical-align: middle;
+	border-top: 1px #CCC dotted;
+}
+.product .Socialbotones{
+	position: relative;
+	top: 8px;
+}
+/*FIN DESCRIPCION*/
+/*INFO*/
+.info{
+	position: relative;
+}
+.infoS{
+	position: relative;
+	height: 350px;
+}
+.info .menu{
+	position: relative;
+	height: 40px;
+	border-bottom: none;
+	border-top: 1px #CCC solid;
+	border-left: 1px #CCC solid;
+	border-right: 1px #CCC solid;
+}
+.info .borderDes{
+	position: relative;
+	background: #FFF;
+	height: 320px;
+	border-bottom: 1px #CCC solid;
+	border-left: 1px #CCC solid;
+	border-right: 1px #CCC solid;
+}
+.info .btnMenu{
+	position: relative;
+	width: 80%;
+	margin-left: 10%;
+	background: -webkit-linear-gradient(top, #FFF, #09C 2%);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	cursor: pointer;
+}
+.info .submenu{
+	height: 5px;
+	background: -webkit-linear-gradient(top, #09C 60%, #20211D 160%);
+}
+.info .titleCol{
+	height: 25%;
+	line-height: 60px;
+	font-size: 18px;
+	color: #666;
+	font-family:Arial, Geneva, sans-serif;
+}
+.info .bodyInfo{
+	font-family:Arial, Geneva, sans-serif;
+	font-size: 15px;
+}
+.info .Description{
+	height: 100%;
+}
+.info .bodyInfo{
+	height: 80%;
+}
+.info .Reglas{
+	height: 100%;
+}
+.info .colAll{
+	height: 100%;
+}
+.info .infoso{
+	height: 100%;
+	border-right: 1px #CCC dashed;
+}
