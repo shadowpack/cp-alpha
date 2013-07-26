@@ -18,7 +18,7 @@
 	<div class="row productS">
 		<div class="col045 first">&nbsp;</div>
 		<div class="col111 bordercol">
-			<div class="col6 img"> 
+			<div class="img"> 
 				<div class="sliderImg">
 					<div class="imagesMov">
 					<?php
@@ -32,99 +32,56 @@
 					<div class="btn_next"><img src="Addons/slider/img/btn_next.png" /></div>
 				</div>
 			</div>
-			<div class="col6 datos">
-				<div class="pretitulo"></div>
+			<div class="datos">
 				<div class="titulo"><?php echo $descripcion['nombre']; ?></div>
 				<div class="bajada">
-					<div class="col1">&nbsp;</div> 
-					<div class="col10"><?php echo $descripcion['descripcion_small']; ?></div>
-					<div class="col1">&nbsp;</div> 
+					<?php echo $descripcion['descripcion_small']; ?>
 				</div>
 				<div class="precio">
-					<div class="col1">&nbsp;</div> 
-					<div class="col5">
-						<div class="precioD">Precio: $<?php echo $descripcion['precio_descuento']; ?></div>
-						<div class="precioR">Antes: $<?php echo $descripcion['precio_real']; ?></div>
+					<div class="precioD">Precio : $<?php echo number_format($descripcion['precio_descuento'],0,",","."); ?></div>
+					<div class="numeros">
+						<div class="descuento">Descuento : 40%</div>
+						<div class="precioR">Antes : $<?php echo number_format($descripcion['precio_real'],0,",","."); ?></div>
 					</div>
-					<div class="col5">
-						<div class="col2">&nbsp;</div>
-						<div class="col10">
-							<div class="tiempo">
-								<div id="reloj"><img src="img/clock2.png" height="18" width="18"/></div>
-								<div id="relojT"></div>
-								<div id="compra" nP="<?php echo $descripcion['id_item']; ?>">Compra</div>
-							</div>
-						</div>						
+					<div class="stock">
+						<div class="stockTitle">Quedan</div>
+						<div class="stockNumber">16</div>
 					</div>
-					<div class="col1">&nbsp;</div> 
-					
+					<div class="tiempo"> 6h:3m:45s</div>
+					<div class="vendidos">Se han vendido: <?php echo $producto->getSell(); ?> CuponPerfumes de este producto.</div>
 				</div>
-				<div class="foot">
-					<div class="footP">
-						<div class="col1 first">&nbsp;</div> 
-						<div class="col10">
-							<div class="sell">Se han vendido: <?php echo $producto->getSell(); ?> CuponPerfumes de este producto.</div>
-						</div>
-						<div class="col1">&nbsp;</div> 
+				<div id="compra">Comprar</div>
+				<div class="social">
+					<div class="Socialbotones">
+						<div class="fb-like" data-href="<?php echo "http://".$_SERVER['HTTP_HOST']."".@$_SERVER['REQUEST_URI']; ?>" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo "http://".$_SERVER['HTTP_HOST']."".@$_SERVER['REQUEST_URI']; ?>" data-via="CuponPerfumes" data-lang="es">Twittear</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
 					</div>
-					<div class="social">
-						<div class="col1 first">&nbsp;</div> 
-						<div class="col10">
-							<div class="Socialbotones">
-								<div class="fb-like" data-href="<?php echo "http://".$_SERVER['HTTP_HOST']."".@$_SERVER['REQUEST_URI']; ?>" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-							<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo "http://".$_SERVER['HTTP_HOST']."".@$_SERVER['REQUEST_URI']; ?>" data-via="CuponPerfumes" data-lang="es">Twittear</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-							</div>
-
-						</div>
-						<div class="col1">&nbsp;</div> 
-					</div>					
+				</div>
+			</div>
+			<div class="infoS">
+				<div class="info">
+					<div class="menus">
+						<div class="btn-description">Descripcion del Cupon</div>
+						<div class="btn-condiciones">Condiciones</div>
+					</div>
+					<div class="tab-description"> <?php echo utf8_encode($descripcion['descripcion']); ?></div>
+					<div class="tab-condiciones"><?php echo utf8_encode($descripcion['condiciones']); ?></div>
+				</div>
+			</div>
+			<div class="mapa">
+				<div class="map">
+					<div class="menus">
+						<div class="btn-where">Donde Nos Encontramos</div>
+					</div>
+					<div class="tab-where"><iframe width="460" height="310" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.cl/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Luis+Thayer+Ojeda+183,+Providencia&amp;aq=0&amp;oq=luis+tayer+ojeda&amp;sll=-33.407827,-70.602103&amp;sspn=0.007801,0.016512&amp;g=Luis+Thayer+Ojeda+183,+Providencia&amp;ie=UTF8&amp;hq=&amp;hnear=Luis+Thayer+Ojeda+183,+Providencia,+Santiago,+Regi%C3%B3n+Metropolitana&amp;t=h&amp;ll=-33.412099,-70.602779&amp;spn=0.02221,0.039396&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe></div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="row">&nbsp;</div>
-<div class="info">
-	<div class="row infoS">
-		<div class="col045 first">&nbsp;</div>
-		<div class="col111 menu">
-			<div class="col12 topmenu"></div>
-			<div class="col045 first">&nbsp;</div>
-			<div class="col111">
-				<div class="col4"><div class="btnMenu">Descripcion y Condiciones</div></div>
-				<div class="col2"><div class="btnMenu">Donde Estamos</div></div>
-				<div class="col2"></div>
-				<div class="col2"></div>
-				<div class="col2"></div>
-			</div>
-			<div class="col045">&nbsp;</div>
-			<div class="col12 submenu"></div>
-		</div>
-		<div class="col045 first">&nbsp;</div>
-		<div class="col111 borderDes">			
-			<div class="col6 colAll">
-				<div class="infoso">
-					<div class="col1">&nbsp;</div>
-					<div class="col10"><div class="Description">
-						<div class="titleCol">¿En que consiste este CuponPerfumes?</div>
-						<div class="bodyInfo"><?php echo $descripcion['descripcion']; ?></div>
-					</div></div>
-					<div class="col1">&nbsp;</div>
-				</div>
-			</div>
-			<div class="col6 colAll">
-				<div class="col1">&nbsp;</div>
-				<div class="col10"><div class="Reglas">
-					<div class="titleCol">¿Cuales son las Condiciones?</div>
-					<div class="bodyInfo"><?php echo $descripcion['reglas']; ?></div>
-				</div></div>
-				<div class="col1">&nbsp;</div>
-			</div>
-		</div>
-	</div>
-</div>
+
 <script>
 //handler de inicio
 $(document).ready(function(){ 
@@ -143,6 +100,26 @@ $(document).ready(function(){
 		var seg = Math.floor((dif%3600)%60);
 		$('#relojT').html(horas+'h '+minutos+'m '+seg+'s');
 	}, 1000);
+	$(".btn-description").click(function(){
+		$(".tab-description").fadeIn();
+		$(".tab-condiciones").fadeOut();
+		$(".btn-condiciones").css({
+			color: "#999"
+		});
+		$(this).css({
+			color: "#555"
+		});
+	});
+	$(".btn-condiciones").click(function(){
+		$(".tab-description").fadeOut();
+		$(".tab-condiciones").fadeIn();
+		$(".btn-description").css({
+			color: "#999"
+		});
+		$(this).css({
+			color: "#555"
+		});
+	});
 	$("#compra").click(function(){
 		$.ajax({
 			url:"capaAjax/addCompra.php",

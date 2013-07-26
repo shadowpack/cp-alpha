@@ -33,7 +33,7 @@ $(document).ready(function(){
 		next:$('.btn_next')
 	});
 	$(".imagelider").click(function(){
-		var num = 350+460*($(this).attr('position')-1);
+		var num = $(".items").offset().top+30+460*($(this).attr('position')-1);
 		$(document).scrollTop(num);
 	});
 });
