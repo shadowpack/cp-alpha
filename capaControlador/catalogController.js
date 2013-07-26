@@ -49,8 +49,8 @@ $.item = function(settings){
 					var t = self.setInterval(function(){
 						hora.html(getHora(atributos.tiempo));
 					},1000)
-					var precio = $('<div></div>').addClass("precioReal").appendTo(text).html("$"+num_format(atributos.precio));
-				var precioDescuento = $('<div></div>').addClass("precioDescuento").appendTo(info).html("$"+num_format(atributos.precio_d));
+					var precio = $('<div></div>').addClass("precioReal").appendTo(text).html("$"+num_format(atributos.precio_r));
+				var precioDescuento = $('<div></div>').addClass("precioDescuento").appendTo(info).html("$"+num_format(atributos.precio));
 				var boton = $('<div></div>').addClass("boton").appendTo(info).html('Ver Mas').click(function(){
 					location.href="product.php?id="+atributos.id;
 				});

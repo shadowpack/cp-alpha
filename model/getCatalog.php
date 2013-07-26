@@ -10,12 +10,12 @@ while($preconsulta[1] = mysql_fetch_array($preconsulta[0]))
 	{
 		$objeto = new stdClass();
 		$result = (object)$consulta[1];
-		$objeto->nombre = $result->nombre;
+		$objeto->nombre = utf8_encode($result->nombre);
 		$objeto->tiempo = $result->tiempoFinal;
 		$objeto->precio_r = $result->precio_real;
 		$objeto->precio = $result->precio_descuento;
 		$objeto->cantidad = $result->cantidad_total;
-		$objeto->descripcion_small = $result->descripcion_small;
+		$objeto->descripcion_small = utf8_encode($result->descripcion_small);
 		$objeto->id = $result->id_item;
 		$objeto->img = $result->source;
 		$resultados[] = $objeto;

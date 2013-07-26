@@ -33,9 +33,9 @@
 				</div>
 			</div>
 			<div class="datos">
-				<div class="titulo"><?php echo $descripcion['nombre']; ?></div>
+				<div class="titulo"><?php echo utf8_encode($descripcion['nombre']); ?></div>
 				<div class="bajada">
-					<?php echo $descripcion['descripcion_small']; ?>
+					<?php echo utf8_encode($descripcion['descripcion_small']); ?>
 				</div>
 				<div class="precio">
 					<div class="precioD">Precio : $<?php echo number_format($descripcion['precio_descuento'],0,",","."); ?></div>
@@ -53,8 +53,8 @@
 				<div id="compra">Comprar</div>
 				<div class="social">
 					<div class="Socialbotones">
-						<div class="fb-like" data-href="<?php echo "http://".$_SERVER['HTTP_HOST']."".@$_SERVER['REQUEST_URI']; ?>" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-					<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo "http://".$_SERVER['HTTP_HOST']."".@$_SERVER['REQUEST_URI']; ?>" data-via="CuponPerfumes" data-lang="es">Twittear</a>
+						<div class="fb-like" data-href="http://www.cuponperfumes.cl/product.php?id=1" data-send="true" data-layout="button_count" data-width="200" data-show-faces="true" data-font="verdana"></div>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="www.google.cl" data-via="CuponPerfumes" data-lang="es">Twittear</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 					</div>
@@ -75,7 +75,7 @@
 					<div class="menus">
 						<div class="btn-where">Donde Nos Encontramos</div>
 					</div>
-					<div class="tab-where"><iframe width="460" height="310" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.cl/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Luis+Thayer+Ojeda+183,+Providencia&amp;aq=0&amp;oq=luis+tayer+ojeda&amp;sll=-33.407827,-70.602103&amp;sspn=0.007801,0.016512&amp;g=Luis+Thayer+Ojeda+183,+Providencia&amp;ie=UTF8&amp;hq=&amp;hnear=Luis+Thayer+Ojeda+183,+Providencia,+Santiago,+Regi%C3%B3n+Metropolitana&amp;t=h&amp;ll=-33.412099,-70.602779&amp;spn=0.02221,0.039396&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe></div>
+					<div class="tab-where"><iframe width="460" height="310" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.cl/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Luis+Thayer+Ojeda+183,+Providencia&amp;aq=0&amp;oq=luis+tayer+ojeda&amp;sll=-33.407827,-70.602103&amp;sspn=0.007801,0.016512&amp;g=Luis+Thayer+Ojeda+183,+Providencia&amp;ie=UTF8&amp;hq=&amp;hnear=Luis+Thayer+Ojeda+183,+Providencia,+Santiago,+Regi%C3%B3n+Metropolitana&amp;t=h&amp;ll=-33.412099,-70.602779&amp;spn=0.02221,0.039396&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe></div>
 				</div>
 			</div>
 		</div>
