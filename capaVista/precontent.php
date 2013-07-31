@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" media="all" href="css/precontent.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/precontent.css" id="precontentCss">
 <script type="text/javascript" src="Addons/slider/slider3.js"></script>
 <div class="rowAll precontent">
 	<div class="row allHeight">
@@ -36,5 +36,14 @@ $(document).ready(function(){
 		var num = $(".items").offset().top+30+460*($(this).attr('position')-1);
 		$(document).scrollTop(num);
 	});
+	if(screen.width >= 1470)
+	{
+		$("#precontentCss").attr("href", "css/precontenthd.css");
+
+	}
+	else
+	{
+		$("#precontentCss").attr("href", "css/precontent1024.css");
+	}
 });
 </script>

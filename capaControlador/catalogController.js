@@ -94,6 +94,7 @@ $.catalogo = function(settings){
 	this._createCatalog = function(){
 		$.ajax({
 			url:'model/getCatalog.php',
+			async: false,
 			success: function(resultado){
 				var result = JSON.parse(resultado);
 				var count = 0;
@@ -126,7 +127,14 @@ $.catalogo = function(settings){
 					}
 				});
 			}
-		})
+		});
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=150061965179618";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
 	}
 	//CODE FINISH HERE
 	_construct(settings);
