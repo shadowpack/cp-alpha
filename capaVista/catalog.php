@@ -8,25 +8,17 @@
 </div>
 <script>
 //handler de inicio
+if(screen.width >= 1470)
+{
+	$("#screenCss").attr("href", "css/bigCatalog_hd.css");
+}
+else
+{
+	$("#screenCss").attr("href", "css/bigCatalog1024.css");
+}
 $(window).load(function(){
-	if(screen.width >= 1470)
-	{
-		var catalogo = new $.catalogo();
-		catalogo._createCatalog();
-		$("#screenCss").attr("href", "css/bigCatalog_hd.css");
-
-	}
-	else
-	{
-		var catalogo = new $.catalogo();
-		catalogo._createCatalog();
-		$("#screenCss").attr("href", "css/bigCatalog1024.css");
-		$(".rowItem").css({
-			height: "380px"
-		});
-	}
-	
-
+	var catalogo = new $.catalogo();
+	catalogo._createCatalog();
 });
 </script>
 <script type="text/javascript" src="capaControlador/screen.js"></script>

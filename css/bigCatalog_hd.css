@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 /*BIG CATALOG*/
+.items .rowItem{
+	height: 460px;
+}
 .bigCatalog{
 	float: left;
 	width: 466px;
