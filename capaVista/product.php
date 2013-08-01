@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" media="all" href="css/product.css"> 
+<link rel="stylesheet" type="text/css" media="all" href="" id="productCss"> 
 <script type="text/javascript" src="Addons/slider/slider.js"></script>
 
 <?php 
@@ -75,7 +75,7 @@
 					<div class="menus">
 						<div class="btn-where">Donde Nos Encontramos</div>
 					</div>
-					<div class="tab-where"><iframe width="460" height="310" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.cl/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Luis+Thayer+Ojeda+183,+Providencia&amp;aq=0&amp;oq=luis+tayer+ojeda&amp;sll=-33.407827,-70.602103&amp;sspn=0.007801,0.016512&amp;g=Luis+Thayer+Ojeda+183,+Providencia&amp;ie=UTF8&amp;hq=&amp;hnear=Luis+Thayer+Ojeda+183,+Providencia,+Santiago,+Regi%C3%B3n+Metropolitana&amp;t=h&amp;ll=-33.412099,-70.602779&amp;spn=0.02221,0.039396&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe></div>
+					<div class="tab-where"><iframe id="mapalocator" width="460" height="310" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.cl/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Luis+Thayer+Ojeda+183,+Providencia&amp;aq=0&amp;oq=luis+tayer+ojeda&amp;sll=-33.407827,-70.602103&amp;sspn=0.007801,0.016512&amp;g=Luis+Thayer+Ojeda+183,+Providencia&amp;ie=UTF8&amp;hq=&amp;hnear=Luis+Thayer+Ojeda+183,+Providencia,+Santiago,+Regi%C3%B3n+Metropolitana&amp;t=h&amp;ll=-33.412099,-70.602779&amp;spn=0.02221,0.039396&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe></div>
 				</div>
 			</div>
 		</div>
@@ -83,6 +83,16 @@
 </div>
 
 <script>
+if(screen.width >= 1470)
+{
+	$("#productCss").attr("href", "css/producthd.css");
+}
+else
+{
+	$("#productCss").attr("href", "css/product1024.css");
+	$("#mapalocator").attr("width", "300px");
+	$("#mapalocator").attr("height", "245px");
+}
 //handler de inicio
 $(document).ready(function(){ 
 	var slider = new $.slider({

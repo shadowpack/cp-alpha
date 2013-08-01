@@ -1,0 +1,386 @@
+@charset "utf-8";
+/* CSS Document */
+.product{
+	position: relative;
+	height: 640px;
+}
+.product .img{
+	float: left;
+	height: 300px;
+	width: 450px;
+	padding: 15px 15px 15px 15px;
+	border-right: 1px #CCC dotted;
+	border-bottom:1px solid #e5e5e5;
+}
+.productS{
+	position: relative;
+}
+.product .bordercol{
+	border: 1px #CCC solid;
+	background: #FFF;
+	height: 100%;
+}
+/*SLIDER*/
+.product .sliderImg{
+	position: relative;
+	height: 300px;
+	width: 450px;
+	overflow: hidden;
+}
+.product .imgSlider{
+	float: left;
+	height: 100%;
+	width: 100%;
+}
+.product .imgSlider .imgItem{
+	height: 300px;
+	width: 450px;
+}
+.product .btn_prev{
+	position: absolute;
+	top:50%;
+	margin-top: -38px;
+	cursor: pointer;
+}
+.product .btn_next{
+	position: absolute;
+	top:50%;
+	margin-top: -38px;
+	right: 0px;
+	cursor: pointer;
+}
+/*FIN SLIDER*/
+/*DESCRIPCION*/
+.product .datos{
+	float:left;
+	height: 300px;
+	width: 435px;
+	padding: 15px 15px 15px 15px;
+	border-bottom:1px solid #e5e5e5;
+}
+.product .pretitulo{
+	position: relative;
+	height: 10%;
+}
+.product .titulo{
+	position: relative;
+	color: #666;
+	font-size: 25px;
+	font-family:Arial, Geneva, sans-serif;
+	height: 25px;
+	padding: 15px 15px 15px 15px;
+	background: #fafafa;
+	border: solid 1px #f4f4f4;
+}
+.product .bajada{
+	position: relative;
+	color: #666;
+	font-size: 12px;
+	font-family:Arial, Geneva, sans-serif;
+	height:50px;
+	padding: 15px 15px 10px 15px;
+}
+.product .precio{
+	position: relative;
+	height:100px;
+	margin-left: 15px;
+	margin-right: 15px;
+	border: 1px solid #E6E6E6;
+	cursor: pointer;
+}
+.product .precio .precioD{
+	float: left;
+	color: #69B80A;
+	font-family: 'Helvetica';
+	font-size: 20px;
+	font-weight: bold;
+	width: 160px;
+	height: 27px;
+	padding: 20px 10px 20px 10px; 
+	border-right: 1px solid #E6E6E6;
+	border-bottom: 1px solid #E6E6E6;
+	text-align: center;
+}
+.product .precio .numeros{
+	float: left;
+	width: 150px;
+	height: 66px;
+}
+.product .precio .descuento{
+	float: left;
+	height: 18px;
+	width: 140px;
+	padding: 7.5px 5px 7.5px 5px; 
+	border-bottom: 1px solid #E6E6E6;
+	color: #2CC1E7;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Helvetica';
+	text-align: center;
+}
+.product .precio .precioR{
+	float: left;
+	color: #666;
+	height: 18px;
+	width: 140px;
+	padding: 7.5px 5px 7.5px 5px; 
+	border-bottom: 1px solid #E6E6E6;
+	text-decoration: line-through;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 'Helvetica';
+	text-align: center;
+
+}
+.product .precio .tiempo{
+	float: left;
+	border-right: solid 1px #E6E6E6;
+	height: 22px;
+	line-height: 22px;
+	padding: 5px 20px 5px 30px;
+	font-family: 'Helvetica';
+	font-size: 12px;
+	width: 55px;
+	color: #999;
+	vertical-align: middle;
+	background: url('../img/home-bg-cupons-tiempo.gif') no-repeat scroll 10px 8px transparent;
+}
+.product .precio .vendidos{
+	float: left;
+	height: 22px;
+	line-height: 22px;
+	padding: 5px 5px 5px 10px;
+	font-family: 'Helvetica';
+	font-size: 11px;
+	width: 282px;
+	color: #999;
+	vertical-align: middle;
+}
+.product .precio .stock{
+	float: left;
+	height: 47px;
+	padding: 10px 10px 10px 10px; 
+	width: 51px;
+	border-left: solid 1px #E6E6E6;
+	border-bottom: solid 1px #E6E6E6;
+}
+.product .precio .stock .stockTitle{
+	line-height: 20px;
+	height: 20px;
+	font-family: 'Helvetica';
+	font-size: 12px;
+	color: #999;
+	font-weight: bold;
+	vertical-align: middle;
+	text-align: center;
+}
+.product .precio .stock .stockNumber{
+	line-height: 30px;
+	font-family: 'Helvetica';
+	font-size: 20px;
+	color: #999;
+	font-weight: bold;
+	vertical-align: middle;
+	text-align: center;
+	height: 30px;
+}
+.product #compra{
+	margin-left: 15px;
+	margin-right: 15px;
+	float: left;
+	height: 15px;
+	width: 345px;
+	color: #FFF;
+	line-height: 15px;
+	vertical-align: middle;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	text-align: center;
+	background: #4AB0E1;
+	padding: 10px 30px 10px 30px;
+	text-shadow: -1px -1px 0 #1584FF;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.product .footP{
+	position: relative;
+	height: 50%;
+}
+.product .sell{
+	line-height: 48px;
+	font-size: 16px;
+	font-family:Arial, Geneva, sans-serif;
+	color: #666;
+	vertical-align: middle;
+}
+.product .social{
+	float:left;
+	font-size: 14px;
+	height: 14px;
+	padding: 10px 10px 10px 15px;
+	font-family:Arial, Geneva, sans-serif;
+	width: 300px;
+	overflow: hidden;
+	color: #666;
+	vertical-align: middle;
+}
+.product .Socialbotones{
+	position: relative;
+	top: 0px;
+}
+/*FIN DESCRIPCION*/
+/*INFO*/
+.infoS{
+	float: left;
+	height: 310px;
+	width: 580px;
+	padding: 15px 15px 15px 10px;
+}
+.info{
+	border:1px solid #e5e5e5;
+	height: 300px;
+	overflow: hidden;
+}
+.info .menus{
+	float: left;
+	height: 35px;
+	width: 580px;
+	border-bottom: 1px solid #e5e5e5;
+	background: url("../img/bg-degrade1.jpg") repeat-x 0 0;
+	cursor: pointer;
+}
+.info .menus .btn-description{
+	float: left;
+	width: 230px;
+	padding: 10px 10px 10px 10px;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	color: #333;
+	border-right: 1px solid #e5e5e5;
+	text-align: center;
+}
+.info .menus .btn-condiciones{
+	float: left;
+	width: 170px;
+	padding: 10px 10px 10px 10px;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	color: #999;
+	text-align: center;
+}
+.info .borderDes{
+	position: relative;
+	background: #FFF;
+	height: 320px;
+	border-bottom: 1px #CCC solid;
+	border-left: 1px #CCC solid;
+	border-right: 1px #CCC solid;
+}
+.info .tab-description{
+	float: left;
+	width: 540px;
+	height: 225px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	padding: 20px 20px 20px 20px;
+	color: #999;
+}
+.info .tab-condiciones{
+	float: left;
+	width: 540px;
+	height: 245px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	padding: 10px 10px 10px 10px;
+	color: #999;
+	display: none;
+}
+.info .tab-where{
+	float: left;
+	width: 798px;
+	height: 290px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	padding: 10px 10px 10px 10px;
+	color: #999;
+	display: none;
+}
+.info .btnMenu{
+	position: relative;
+	width: 80%;
+	margin-left: 10%;
+	background: -webkit-linear-gradient(top, #FFF, #09C 2%);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	cursor: pointer;
+}
+.info .submenu{
+	height: 5px;
+	background: -webkit-linear-gradient(top, #09C 60%, #20211D 160%);
+}
+.info .titleCol{
+	height: 25%;
+	line-height: 60px;
+	font-size: 18px;
+	color: #666;
+	font-family:Arial, Geneva, sans-serif;
+}
+.info .bodyInfo{
+	font-family:Arial, Geneva, sans-serif;
+	font-size: 15px;
+}
+.info .Description{
+	height: 100%;
+}
+.info .bodyInfo{
+	height: 80%;
+}
+.info .Reglas{
+	height: 100%;
+}
+.info .colAll{
+	height: 100%;
+}
+.info .infoso{
+	height: 100%;
+	border-right: 1px #CCC dashed;
+}
+.mapa{
+	float: left;
+	height: 310px;
+	width: 320px;
+	padding: 15px 10px 15px 5px;
+}
+.map{
+	border:1px solid #e5e5e5;
+	height: 300px;
+	overflow: hidden;
+}
+.map .menus{
+	float: left;
+	height: 35px;
+	width: 320px;
+	border-bottom: 1px solid #e5e5e5;
+	background: url("../img/bg-degrade1.jpg") repeat-x 0 0;
+	cursor: pointer;
+}
+.map .menus .btn-where{
+	float: left;
+	width: 220px;
+	padding: 10px 10px 10px 5px;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	color: #666;
+	text-align: center;
+}
+.map .tab-where{
+	float: left;
+	width: 300px;
+	height: 310px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	padding: 10px 10px 10px 10px;
+	color: #999;
+}
