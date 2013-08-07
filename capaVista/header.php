@@ -18,7 +18,7 @@
 				<?php 
                 if($_SESSION['id'] != NULL AND $_SESSION['token'] != NULL)
                 {
-                    echo '<div class="col1"><div class="btnHeader" id="account">Mi Cuenta</div></div>';
+                    echo '<div class="col12"><div class="btnHeader" id="account">Mi Cuenta</div></div>';
                 }
                 else
                 {

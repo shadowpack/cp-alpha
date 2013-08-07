@@ -1,41 +1,473 @@
 @charset "utf-8";
 /* CSS Document */
-.checkoutRow{
-	height: 40px;
-}
-.checkoutRow2{
-	height: 20px;
-}
-.checkoutDel{
-	height: 60px;
-}
-.checkoutBot{
+/*HEADER PRIMERARIO*/
+.checkoutTop{
 	height: 80px;
 }
 .checkout{
+	position: relative;
+	width: 100%;
+}
+.checkoutheader{
+	float: left;
+	width: 80%;
+	padding: 0px 10% 0px 10%;
+}
+.checkout .headerTop{
+	float: left;
 	height: 100%;
+	padding: 20px 10% 20px 4%;
+	border: 1px #CCC solid;
+	border-bottom: none;
+	background: #FFF;
+	width: 86%;
+}
+/*PRODUCTOS*/
+.checkoutRow{
+	height: 110px;
+}
+.checkout .checkoutBody{
+	float: left;
+	width: 80%;
+	padding: 0px 10% 0px 10%;
+}
+.checkout .checkoutBody .checkoutItem{
+	float: left;
+	background: #FFF;
+	border: 1px #CCC solid;
+	border-top: none;
+	border-bottom: none;
+	width: 90%;
+	padding: 10px 5% 10px 5%;
+}
+.checkout .precioNombre{
+	float: left;
+	height: 90px;
+	line-height: 80px;
+	color: #666;
+	vertical-align: middle;
+	font-size: 18px;
+	font-family:Arial, Geneva, sans-serif;
+	width: 130px;
+	font-family: 'Helvetica';
+	padding: 0px 20px 0px 10px;
+}
+.checkout .precioDescripcion{
+	float: left;
+	height: 90px;
+	color: #666;
+	vertical-align: middle;
+	font-size: 11px;
+	font-family:Arial, Geneva, sans-serif;
+	width: 400px;
+	font-family: 'Helvetica';
+	padding: 0px 20px 0px 0px;
+	border-right: 1px #CCC dashed;
+}
+.checkout .DescripcionTitle{
+	float: left;
+	height: 30px;
+	font-size: 16px;
+}
+.checkout .DescripcionContent{
+	float: left;
+	height: 60px;
+}
+.checkout .Cantidad{
+	float: left;
+	width: 120px;
+	height: 90px;
+	border-right: 1px #CCC dashed;
+}
+.checkout .Cantidad .CantidadTitle{
+	float: left;
+	height: 30px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	color: #666;
+	width: 120px;
+	text-align: center;
+}
+.checkout .Cantidad .CantidadContent{
+	float: left;
+	height: 40px;
+	width: 80px;
+	padding: 5px 20px 15px 20px;
+}
+.checkout .Cantidad .amount{
+	float: left;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	border: 1px #CCC solid;
+}
+.checkout .Cantidad .amountNumber{
+	float: left;
+	width: 30px;
+	height: 40px;
+	padding: 0px 10px 0px 10px;
+	text-align: center;
+	font-size: 18px;
+	color: #666;
+	font-family: 'Helvetica';
+}
+.checkout .Cantidad .boton{
+	float: left;
+	padding: 2.5px 2.5px 2.5px 2.5px;
+}
+.checkout .Cantidad .amountUp{
+	float: left;
+	width: 25px;
+	height: 15px;
+	line-height: 15px;
+	vertical-align: middle;
+	text-align: center;
+	background: #FF9933;
+	color: #FFF;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	border-radius: 2px;
+	cursor: pointer;
+}
+.checkout .Cantidad .amountDown{
+	float: left;
+	width: 25px;
+	height: 15px;
+	line-height: 15px;
+	vertical-align: middle;
+	text-align: center;
+	background: #FF9933;
+	color: #FFF;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	border-radius: 2px;
+	cursor: pointer;
+}
+.checkout .Precio{
+	float: left;
+	height: 90px;
+	color: #666;
+	vertical-align: middle;
+	font-size: 11px;
+	width: 180px;
+	border-right: 1px #CCC dashed;
+}
+.checkout .Precio .PrecioTitle{
+	float: left;
+	height: 30px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	color: #666;
+	width: 180px;
+	text-align: center;
+}
+.checkout .Precio .PrecioDContent{
+	float: left;
+	height: 30px;
+	width: 180px;
+	font-size: 22px;
+	text-align: center;
+	font-family: 'Helvetica';
+	color: #4AB0E1;
+	font-weight: bold;
+}
+.checkout .Precio .PrecioRContent{
+	float: left;
+	height: 30px;
+	width: 180px;
+	font-size: 14px;
+	text-decoration: line-through;
+	font-family: 'Helvetica';
+	text-align: center;
+}
+.checkout .Total{
+	float: left;
+	height: 90px;
+	color: #666;
+	vertical-align: middle;
+	font-size: 11px;
+	width: 165px;
+}
+.checkout .Total .TotalTitle{
+	float: left;
+	height: 30px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	color: #666;
+	width: 165px;
+	text-align: center;
+}
+.checkout .Total .TotalContent{
+	float: left;
+	height: 30px;
+	width: 165px;
+	font-size: 22px;
+	text-align: center;
+	font-family: 'Helvetica';
+	color: #4AB0E1;
+	font-weight: bold;
+}
+/*DELIVERY*/
+.checkoutRowDelivery{
+	height: 110px;
 }
 .checkout .checkoutDelivery{
-	position: relative;
-	height: 100%;
+	float: left;
+	height: 90px;
+	padding: 0px 10% 0px 10%;
+	width: 80%;
+}
+.checkout #locationsSelect{
+	float: left;
+	height: 90px;
 	border: 1px #CCC solid;
 	border-top: none;
 	background: #FFF;
+	width: 90%;
+	padding: 10px 5% 10px 5%;
 }
+.checkout .radioDelivery{
+	float: left;
+	height: 90px;
+	line-height: 90px;
+	width: 270px;
+	vertical-align: middle;
+	color: #666;
+	font-size: 16px;
+	font-family: 'Helvetica';
+}
+.checkout .locationsRadio{
+	float: left;
+	height: 90px;
+	line-height: 90px;
+	width: 430px;
+	vertical-align: middle;
+	color: #666;
+	font-size: 18px;
+	font-family: 'Helvetica';
+	border-left: 1px #CCC dashed;
+	border-right: 1px #CCC dashed;
+}
+.checkout .LocationTitle{
+ 	float: left;
+	height: 30px;
+	line-height: 30px;
+	width: 410px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	color: #666;
+	padding: 0px 0px 0px 25px;
+}
+.checkout .LocationContent{
+ 	float: left;
+	height: 60px;
+	line-height: 60px;
+	width: 410px;
+	font-size: 22px;
+	font-family: 'Helvetica';
+	color: #4AB0E1;
+	font-weight: bold;
+	padding: 0px 0px 0px 25px;
+}
+.checkout .precioDelivery{
+	float: left;
+	width: 165px;
+	height: 90px;
+	border-left:1px #CCC dashed;
+}
+.checkout .DeliveryTitle{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	color: #666;
+	width: 165px;
+	text-align: center;
+}
+.checkout .DeliveryContent{
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	width: 165px;
+	font-size: 22px;
+	text-align: center;
+	font-family: 'Helvetica';
+	color: #4AB0E1;
+	font-weight: bold;
+}
+.checkout .locationDel{
+	float: left;
+	height: 90px;
+}
+.checkout .direccionDelivery{
+ 	position: relative; 
+ 	top: 17.5px;
+	height: 25px;
+	width: 380px;
+}
+.checkout .unitarioDespacho{
+	float: left;
+	width: 180px;
+}
+.checkout .unitarioDespachoTitle{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	color: #666;
+	width: 165px;
+	text-align: center;
+}
+.checkout .unitarioDespachoContent{
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	width: 165px;
+	font-size: 22px;
+	text-align: center;
+	font-family: 'Helvetica';
+	color: #4AB0E1;
+	font-weight: bold;
+}
+/*FORMAS DE PAGO*/
+.checkout .checkoutFormaPago{
+	float: left;
+	height: 160px;
+	padding: 0px 10% 0px 10%;
+	width: 80%;
+}
+.checkout .FormaPagoSelect{
+	float: left;
+	height: 130px;
+	border: 1px #CCC solid;
+	border-top: none;
+	background: #FFF;
+	width: 90%;
+	padding: 10px 5% 20px 5%;
+}
+.checkout .SelectPago{
+	float: left;
+	width: 880px;
+	height: 120px;
+	border-right:1px #CCC dashed;
+}
+.checkoutPagoRow{
+	height: 160px;
+}
+.checkout .FormaPagoSelect .credito{
+	float: left;
+	height: 120px;
+	border-top: none;
+	background: #FFF;
+	width: 440px;
+	cursor: pointer;
+}
+.checkout .FormaPagoSelect .transbank{
+	float: left;
+	height: 120px;
+	border-top: none;
+	background: #FFF;
+	width: 440px;
+	cursor: pointer;
+}
+.checkout .radioPago{
+	float: left;
+	height: 30px;
+	width: 20px;
+	padding: 45px 20px 45px 20px;
+}
+.checkout .FormaPagoSelect .credito .webpayCreditoImg{
+	float: left;
+	width: 150px;
+	height: 100px;
+	padding: 10px 10px 10px 10px;
+	border:1px #CCC solid;
+}
+.checkout .FormaPagoSelect .transbank .webpayRedCompraImg{
+	float: left;
+	width: 120px;
+	height: 100px;
+	padding: 10px 10px 10px 10px;
+	border:1px #CCC solid;
+}
+.checkout .SelectPago .Pdescription{
+	float: left;
+	width: 250px;
+	height: 120px;
+}
+.checkout .titleMethod{
+	float: left;
+	width: 220px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	color: #333;
+	vertical-align: middle;
+	padding: 0px 10px 0px 20px;
+}
+.checkout .contentMethod{
+	float: left;
+	width: 220px;
+	height: 70px;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	color: #666;
+	padding: 10px 10px 0px 20px;
+}
+.checkout .PagoTotal{
+	float: left;
+	width: 165px;
+	height: 120px;
+}
+.checkout .PagoTotal .PagoTitle{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	font-family: 'Helvetica';
+	color: #666;
+	width: 165px;
+	text-align: center;
+}
+.checkout .PagoTotal .PagoContent{
+	float: left;
+	height: 60px;
+	width: 165px;
+	font-size: 22px;
+	text-align: center;
+	font-family: 'Helvetica';
+	color: #4AB0E1;
+	line-height: 60px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
 .checkout .checkoutBodyTop{
 	position: relative;
 	height: 100%;
 	border: 1px #CCC solid;
 	border-bottom: none;
 	background: #FFF;
+	padding: 20px 30px 20px 30px;
 }
-.checkout .checkoutBody{
+.checkout .checkoutBodyMiddle{
 	position: relative;
 	height: 100%;
 	border: 1px #CCC solid;
-	border-top: none;
 	border-bottom: none;
+	border-top: 1px #CCC dashed;
 	background: #FFF;
+	padding: 20px 30px 20px 30px;
 }
 .checkout .detalle{
 	position: relative;
@@ -62,7 +494,7 @@
 	top: 20px;
 	height: 35px;
 	width: 150px;
-	border: 1px #999 solid;
+	border: 1px #4AB0E1 solid;
 	width: 85%;
 	color: #FFF;
 	line-height: 35px;
@@ -70,7 +502,7 @@
 	font-size: 16px;
 	font-family:Arial, Geneva, sans-serif;
 	text-align: center;
-	background: -webkit-linear-gradient(top, #BAFF8C, #499300);
+	background: #4AB0E1;
 	border-radius: 5px;
 	font-weight: bold;
 	cursor: pointer;
@@ -84,33 +516,10 @@
 	font-size: 26px;
 	font-family:Arial, Geneva, sans-serif;
 }
-.checkout .radioDelivery{
-	position: relative;
-	height: 40px;
-	line-height: 40px;
-	vertical-align: middle;
-	color: #666;
-	font-size: 18px;
-	font-family:Arial, Geneva, sans-serif;
-}
-.checkout .precio{
-	position: relative;
-	height: 40px;
-	line-height: 40px;
-	color: #666;
-	vertical-align: middle;
-	font-size: 18px;
-	font-family:Arial, Geneva, sans-serif;
-}
-.checkout .locationDel{
-	position: relative;
-	height: 60px;
-}
-.checkout .direccionDelivery{
- 	position: relative; 
-	height: 30px;
-	width: 600px;
-}
+
+
+
+
 .checkout .textDel{
 	position: relative;
 	height: 30px;
@@ -125,10 +534,7 @@
 	height: 90px;
 	display: none;
 }
-.checkout #locationsSelect{
-	position: relative;
-	height: 50px;
-}
+
 .checkout .imgRemove{
 	position: relative;
 	top:3.5px;
@@ -138,10 +544,33 @@
 	position: relative;
 	top:10px;
 }
-.checkout #pagoOption{
-	position: relative;
-	top:-13px;
-}
+
 .checkout .payForm{
 	display: hidden;
+}
+.checkout .figura{
+	float: left;
+	height: 35px;
+	width: 35px;
+	border-radius: 20px;
+	background: #4AB0E1;
+	text-align: center;
+	line-height: 35px;
+	vertical-align: middle;
+	font-size: 18px;
+	color: #FFF;
+	font-weight: bold;
+}
+.checkout .title{
+	float: left;
+	font-family: 'Helvetica';
+	font-size: 22px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	color:#666;
+	padding: 0px 10px 0px 10px;
+}
+.midleborder{
+	border-top: 1px #CCC dashed;
 }

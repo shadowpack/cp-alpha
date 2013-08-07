@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" media="all" href="css/precontent.css" id="precontentCss">
+<link rel="stylesheet" type="text/css" media="all" href="" id="precontentCss">
 <script type="text/javascript" src="Addons/slider/slider3.js"></script>
 <div class="rowAll precontent">
 	<div class="row allHeight">
@@ -6,7 +6,7 @@
 			<div class="col02">&nbsp;</div>
 			<div class="col1106 imagesMov">
 			<?php
-				require_once('model/db_core.php');
+				@require_once('model/db_core.php');
 				$db = new db_core();
 				$consulta[0] = $db->query("SELECT * FROM category as c ORDER BY c.position");
 				while($consulta[1] = mysql_fetch_array($consulta[0]))
@@ -24,6 +24,15 @@
 </div>
 <script>
 //handler de inicio
+if(screen.width >= 1470)
+{
+	$("#precontentCss").attr("href", "css/precontenthd.css");
+
+}
+else
+{
+	$("#precontentCss").attr("href", "css/precontent1024.css");
+}
 $(document).ready(function(){ 
 	var slider = new $.slider3({
 		object: $('.imagesSlider3'),
@@ -36,14 +45,6 @@ $(document).ready(function(){
 		var num = $(".items").offset().top+30+460*($(this).attr('position')-1);
 		$(document).scrollTop(num);
 	});
-	if(screen.width >= 1470)
-	{
-		$("#precontentCss").attr("href", "css/precontenthd.css");
-
-	}
-	else
-	{
-		$("#precontentCss").attr("href", "css/precontent1024.css");
-	}
+	
 });
 </script>

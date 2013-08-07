@@ -5,34 +5,21 @@
 	$checkout = new checkout();
 	$db = new db_core();
 	$db->query('INSERT INTO transacciones_transbank (TBK_MONTO) VALUES ("'.$checkout->getTotal().'")');
-	$id = mysql_insert_id ();
+	$id = mysql_insert_id();
 	$retorno = array();
-	$retorno['monto'] = ($_POST['delivery'] == "true")?3000:0;
 	$retorno['id_transaccion'] = $id;
-	foreach ($_SESSION["CuponPerfumes-Sell"] as $key => $value) {
-		if($key != "delivery"){
-			//COMPROBAMOS QUE HALLAN UNIDADES DISPONIBLES
-			//POR HACER
-			if($_POST['delivery'])
-			{	
-				if($db->query("INSERT INTO transacciones (id_producto,id_user,tbk_orden_compra,fecha,statusPay,cantidad,location,delivery) VALUES ('".$key."','".$_SESSION['id']."','".$id."','".time()."','0','".$value."','".$_POST['location']."','1')"))
-				{
-					$valor = $db->reg_one("SELECT precio_descuento FROM productos as p WHERE p.id_item='".$key."'"); 
-					$retorno['monto'] += $valor[0]*$value;
-				}
-				
-			}
-			else
-			{
-				if($db->query("INSERT INTO transacciones (id_producto,id_user,tbk_orden_compra,fecha,statusPay,cantidad,location,delivery) VALUES ('".$key."','".$_SESSION['id']."','".$id."','".time()."','0','".$value."','','0')"))
-				{
-					$valor = $db->reg_one("SELECT precio_descuento FROM productos as p WHERE p.id_item='".$key."'"); 
-					$retorno['monto'] += $valor[0]*$value;
-				}
-			}
+	for($i=0; $i<$_SESSION["CuponPerfumes-Sell"]['number']; $i++) {
+		if($_SESSION["CuponPerfumes-Sell"]['delivery'])
+		{
+			$db->query("INSERT INTO transacciones (id_producto,id_user,tbk_orden_compra,fecha,statusPay,cantidad,location,delivery,tipo_medio) VALUES ('".$_SESSION["CuponPerfumes-Sell"]['id']."','".$_SESSION['id']."','".$id."','".time()."','0','1','".$_POST['location']."','1', '".$_POST['medio']."')");
 		}
+		else
+		{
+			$db->query("INSERT INTO transacciones (id_producto,id_user,tbk_orden_compra,fecha,statusPay,cantidad,location,delivery,tipo_medio) VALUES ('".$_SESSION["CuponPerfumes-Sell"]['id']."','".$_SESSION['id']."','".$id."','".time()."','0','1','','0', '".$_POST['medio']."')");
+		}
+		
 	}
-	$retorno['monto'] = $retorno['monto'].".00";
+	$retorno['monto'] = $checkout->getTotal().".00";
 	echo json_encode((object)$retorno);
 
 ?>

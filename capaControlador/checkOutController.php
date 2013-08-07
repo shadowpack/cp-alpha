@@ -1,32 +1,32 @@
 <?php 
 @session_start();
-@include("model/db_core.php");
 class checkout
 {
 	private $db;
 	function checkout(){
 		$this->db = new db_core();
 	}
-	private function number(){
-		$total = 0;
-		foreach($_SESSION["CuponPerfumes-Sell"] as $key => $vector) {
-			$total += $vector;
-		}
-		return $total;
+	public function newProduct($id){
+		$_SESSION["CuponPerfumes-Sell"]['id'] = $id;
+		$_SESSION["CuponPerfumes-Sell"]['delivery'] = false;
+		$_SESSION["CuponPerfumes-Sell"]['number'] = 1;
+	}
+	public function reset(){
+		$_SESSION["CuponPerfumes-Sell"]['delivery'] = false;
+		$_SESSION["CuponPerfumes-Sell"]['number'] = 1;
+	}
+	public function addProduct(){
+		$_SESSION["CuponPerfumes-Sell"]['number']++;
+	}
+	public function removeProduct(){
+		$_SESSION["CuponPerfumes-Sell"]['number']--;
 	}
 	public function getTotal(){
-		$total = 0;
-		foreach($_SESSION["CuponPerfumes-Sell"] as $key => $vector) {
-			if($key != "delivery")
-			{
-				$con = $this->db->reg_one("SELECT precio_descuento FROM productos as p WHERE p.id_item='".$key."'");
-				$total += $con[0]*$vector;
-			}
-		}
+		$con = $this->db->reg_one("SELECT precio_descuento FROM productos as p WHERE p.id_item='".$_SESSION["CuponPerfumes-Sell"]['id']."'");
+		$total += $con[0]*$_SESSION["CuponPerfumes-Sell"]['number'];
 		if($_SESSION["CuponPerfumes-Sell"]['delivery'])
 		{
-			$con = $this->db->reg_one("SELECT value FROM settings as s WHERE s.name='delivery'");
-			$total += $con['value'];
+			$total += $this->getDelivery()*$_SESSION["CuponPerfumes-Sell"]['number'];
 		}
 		return $total;
 	}
@@ -37,43 +37,47 @@ class checkout
 			echo '<option value="'.$con[1]['id_location'].'">'.$con[1]['direccion'].','.$con[1]['comuna'].','.$con[1]['city'].'</option>';
 		}
 	}
+	public function setDelivery($valor){
+		$_SESSION["CuponPerfumes-Sell"]['delivery'] = $valor;
+	}
 	public function getDelivery(){
-		$con = $this->db->reg_one("SELECT value FROM settings as s WHERE s.name='delivery'");
-		/*FACTOR MULTIPLICATIVO*/
-		$factor = 1; // $this->number();
-		return $con[0]*$factor;
+		$con = $this->db->reg_one("SELECT precio_delivery FROM productos as p WHERE p.id_item='".$_SESSION["CuponPerfumes-Sell"]['id']."'");
+		return $con[0];
 	}
 	public function printCheckout(){
-		$contador = 0;
-		foreach($_SESSION["CuponPerfumes-Sell"] as $key => $vector) {
-			if($key != "delivery")
-			{
-				$con = $this->db->reg_one("SELECT * FROM productos as p WHERE p.id_item='".$key."'");
-				for($i=0; $i<$vector; $i++)
-				{
-					$contador++;
-					echo '<div class="row checkoutRow">
-						<div class="col1 first">&nbsp;</div>
-						<div class="col10 checkout">
-							<div class="checkoutBody">
-								<div class="col1 first">&nbsp;</div>
-								<div class="col9"><div class="precio">'.$contador." - ".$con['nombre'].'</div></div>
-								<div class="col1"><div class="precio">$'.number_format($con['precio_descuento'],0,",",".").'</div></div>
-								<div class="col1"><div class="imgRemove"><img src="img/carrout.jpg" height="30" width="35" alt="Eliminar" class="Eliminar" value="'.$con['id_item'].'"/></div></div>
+		$con = $this->db->reg_one("SELECT * FROM productos as p INNER JOIN imagenes_productos ON imagenes_productos.id_item = p.id_item WHERE p.id_item='".$_SESSION["CuponPerfumes-Sell"]['id']."' AND imagenes_productos.portrait='1'");
+		echo '<div class="row checkoutRow">
+			<div class="col12 checkout">
+				<div class="checkoutBody">
+					<div class="checkoutItem">
+						<div class="precioNombre"><img src="'.$con['source'].'" height="80" /></div>
+						<div class="precioDescripcion">
+							<div class="DescripcionTitle">Descripcion del producto</div>
+							<div class="DescripcionContent">'.$con['descripcion_small'].'</div>
+						</div>
+						<div class="Cantidad">
+							<div class="CantidadTitle">Cantidad</div>
+							<div class="CantidadContent">
+								<div class="amount">
+									<div class="amountNumber">1</div>
+									<div class="boton"><div class="amountUp">+</div></div>
+									<div class="boton"><div class="amountDown">-</div></div>
+								</div>
 							</div>
 						</div>
-						<div class="col1">&nbsp;</div>
-					</div>';
-				}
-			}
-		}
-	}
-	public function delProduct($id){
-		$_SESSION["CuponPerfumes-Sell"][$id]--;
-		if($_SESSION["CuponPerfumes-Sell"][$id] == 0)
-		{
-			unset($_SESSION["CuponPerfumes-Sell"][$id]);
-		}
+						<div class="Precio">
+							<div class="PrecioTitle">Precio Unitario</div>
+							<div class="PrecioDContent">$ <span class="precioDes">'.number_format($con['precio_descuento'],0,",",".").'<span></div>
+							<div class="PrecioRContent">$ <span>'.number_format($con['precio_real'],0,",",".").'<span></div>
+						</div>
+						<div class="Total">
+							<div class="TotalTitle">Sub Total</div>
+							<div class="TotalContent">$ <span class="totalValor">'.number_format($con['precio_descuento'],0,",",".").'<span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>';
 	}
 }
 ?>

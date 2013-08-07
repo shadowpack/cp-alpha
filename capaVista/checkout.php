@@ -1,132 +1,254 @@
 <?php 
-	require_once('capaControlador/checkOutController.php');
+	@require_once("model/db_core.php");
+	@require_once('capaControlador/checkOutController.php');
 	$total = new checkout();
-	$_SESSION["CuponPerfumes-Sell"]['delivery'] = false;
+	$total->reset();
 ?>
 <link rel="stylesheet" type="text/css" media="all" href="css/checkout.css"> 
-<div class="row checkoutRow">
-	<div class="col1 first">&nbsp;</div>
-	<div class="col10 checkout">
-		<div class="checkoutBodyTop">
+<div class="row checkoutTop">
+	<div class="col12 checkout">
+		<div class="checkoutheader">
+			<div class="headerTop">
+				<div class="figura">1</div>
+				<div class="title">Tu compra</div>
+			</div>
 		</div>
 	</div>
-	<div class="col1">&nbsp;</div>
 </div>
 <?php $total->printCheckout(); ?>
-<div class="row checkoutRow2">
-	<div class="col1 first">&nbsp;</div>
-	<div class="col10 checkout">
-		<div class="checkoutBody">
-			<div class="col1 first">&nbsp;</div>
+<div class="row checkoutTop">
+	<div class="col12 checkout">
+		<div class="checkoutheader">
+			<div class="headerTop">
+				<div class="figura">2</div>
+				<div class="title">Otras Opciones</div>
+			</div>
 		</div>
 	</div>
-	<div class="col1">&nbsp;</div>
 </div>
-<div class="row checkoutDel">
-	<div class="col1 first">&nbsp;</div>
-	<div class="col10 checkout">
+<div class="row checkoutRow">
+	<div class="col12 checkout">
 		<div class="checkoutDelivery">
 			<div id="locationsSelect">
-				<div class="col1 first">&nbsp;</div>
-				<div class="col9">
-					<div class="radioDelivery">
-					<input type="radio" name="delivery" id="delivery" value="false" checked>Sin Despacho
-					<input type="radio" name="delivery" id="Nodelivery" value="true">Con Despacho
-					</div>
+				<div class="radioDelivery" value="false">
+					<input type="radio" name="delivery" id="NoDelivery" value="false" checked>Sin Despacho
+					<input type="radio" name="delivery" id="Delivery" value="true">Con Despacho
 				</div>
-				<div class="col2"><div class="precio" id="precioDelivery">$0</div></div>
-			</div>
-			<!-- ACA SE ELIGE LA DIRECCION -->
-			<div id="locationsDel">
-				<div class="col1 first">&nbsp;</div>
-				<div class="col11"><div class="textDel">Seleccione la direccion de Despacho : </div></div>
-				<div class="col1 first">&nbsp;</div>
-				<div class="col11">
-					<div class="locationDel">
-						<select class="direccionDelivery">
+				<div class="locationsRadio">
+					<div class="LocationTitle">Seleccione la direccion de Despacho</div>
+					<div class="LocationContent">
+						<select class="direccionDelivery" disabled="disabled">
 							<?php $total->printLocation(); ?>
 						</select>
 					</div>
 				</div>
+				<div class="unitarioDespacho">
+					<div class="unitarioDespachoTitle">Precio Unitario</div>
+					<div class="unitarioDespachoContent">$ <span class="despachoUnita"><?php echo $total->getDelivery(); ?></span></div>
+				</div>
+				<div class="precioDelivery" id="precioDelivery">
+					<div class="DeliveryTitle">Costo de Despacho</div>
+					<div class="DeliveryContent">$ <span class="pagoDespacho">0</span></div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col1">&nbsp;</div>
 </div>
-<div class="row checkoutBot">
-	<div class="col1 first">&nbsp;</div>
-	<div class="col10 checkout">
-		<div class="checkoutFoot">
-			<div class="col1">&nbsp;</div>
-			<div class="col5"><div class="spanTotal">Total : $<?php echo number_format($total->getTotal(),0,",","."); ?></div></div>
-			<div class="col3"><input type="radio" name="pagoOption" id="pagoOption" value="false" checked><img src="img/webpay.jpg" height="60" width="150" class="webpayImg"/></div>
-			<div class="col3"><div class="btnPago">Pagar</div></div>
+<!-- MEDIOS DE PAGO -->
+<div class="row checkoutTop">
+	<div class="col12 checkout">
+		<div class="checkoutheader">
+			<div class="headerTop">
+				<div class="figura">3</div>
+				<div class="title">Elige un medio de pago</div>
+			</div>
 		</div>
 	</div>
-	<div class="col1">&nbsp;</div>
+</div>
+<div class="row checkoutPagoRow">
+	<div class="col12 checkout">
+		<div class="checkoutFormaPago">
+			<div class="FormaPagoSelect">
+				<div class="SelectPago">
+					<div class="credito">
+						<div class="webpayCreditoImg"><img src="img/tarjeta_credito.jpg" height="100"/></div>
+						<div class="Pdescription">
+							<div class="titleMethod">Tarjetas de Credito</div>
+							<div class="contentMethod">Paga con tus tarjetas de credito favorita. Aceptamos Visa, MasterCard, Magna, American Express o Dinners.</div>
+						</div>
+					</div>
+					<div class="transbank">
+						<div class="webpayRedCompraImg"><img src="img/red_compra.gif" height="100"/></div>
+						<div class="Pdescription">
+							<div class="titleMethod">Tarjetas de Debito</div>
+							<div class="contentMethod">Paga con tu tarjea de debito RedCompra.</div>
+						</div>
+					</div>
+				</div>
+				<div class="PagoTotal">
+					<div class="PagoTitle">Total a Pagar</div>
+					<div class="PagoContent">$ <span class="pagoTotal">0</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <script>
 //handler de inicio
 $(document).ready(function(){
-	$("input[name='delivery']").click(function(){
-		if($(this).val() == "true")
-		{
-			$("#locationsDel").show();
-			$(".checkoutDel").css({height: '+=80px'});
-			$.ajax({
-				url: "capaAjax/getDelivery.php",
-				type: "POST",
-				data: { 
-					status: "true"
-				},
-				success: function(resultado){
-					var result = JSON.parse(resultado);
-					$("#precioDelivery").html("$"+num_format(result.delivery));
-					$(".spanTotal").html("Total : $"+num_format(result.total));
-				}
-			});
-		}
-		else
-		{
-			$("#locationsDel").hide();
-			$(".checkoutDel").css({height: '-=80px'});
-			$.ajax({
-				url: "capaAjax/getDelivery.php",
-				type: "POST",
-				data: { 
-					status: "false"
-				},
-				success: function(resultado){
-					var result = JSON.parse(resultado);
-					$("#precioDelivery").html("$"+num_format(result.delivery));
-					$(".spanTotal").html("Total : $"+num_format(result.total));
-				}
-			});
-		}
-	});
-	$('.Eliminar').click(function(){
-		that = $(this);
+	// FUNCIONES DE AGREGAR PRODUCTOS
+	$(".amountUp").click(function(){
 		$.ajax({
-			url: "capaAjax/removeCompra.php",
+			url: "capaAjax/compraProcess.php",
 			type: "POST",
 			data: { 
-				remove: that.attr('value')
+				action:1
 			},
 			success: function(resultado){
 				var result = JSON.parse(resultado);
-				$("#precioDelivery").html("$"+num_format(result.delivery));
-				$(".spanTotal").html("Total : $"+num_format(result.total));
-				that.parent().parent().parent().parent().parent().remove();
+				if(result.status)
+				{
+					$(".amountNumber").html(parseInt($(".amountNumber").html())+1);
+					$(".totalValor").html(num_format(parseInt($(".precioDes").html().replace('.',''))*parseInt($(".amountNumber").html())));
+					if($('.radioDelivery').val() == "true")
+					{
+						$('.pagoDespacho').html(num_format(parseInt($(".despachoUnita").html().replace('.',''))*parseInt($(".amountNumber").html())));
+						$('.pagoTotal').html(num_format(result.total));
+					}
+					else
+					{
+						$('.pagoDespacho').html('0');
+						$('.pagoTotal').html(num_format(result.total));
+					}
+				}
+				else
+				{
+					alert("Existe un error al procesar la solicitud, Por favor contacte con el soporte tecnico");
+				}
 			}
 		});
 	});
-	$(".btnPago").click(function(){
+	$(".amountDown").click(function(){
+		if(parseInt($(".amountNumber").html()) > 1)
+		{
+			$.ajax({
+				url: "capaAjax/compraProcess.php",
+				type: "POST",
+				data: { 
+					action:2
+				},
+				success: function(resultado){
+					var result = JSON.parse(resultado);
+					if(result.status)
+					{
+						$(".amountNumber").html(parseInt($(".amountNumber").html())-1);
+						$(".totalValor").html(num_format(parseInt($(".precioDes").html().replace('.',''))*parseInt($(".amountNumber").html())));
+						if($('.radioDelivery').val() == "true")
+						{
+							$('.pagoDespacho').html(num_format(parseInt($(".despachoUnita").html().replace('.',''))*parseInt($(".amountNumber").html())));
+							$('.pagoTotal').html(num_format(result.total));
+						}
+						else
+						{
+							$('.pagoDespacho').html('0');
+							$('.pagoTotal').html(num_format(result.total));
+						}
+					}
+					else
+					{
+						alert("Existe un error al procesar la solicitud, Por favor contacte con el soporte tecnico");
+					}
+				}
+			});
+		}
+	});
+	$("#Delivery").click(function(){
+		$(".direccionDelivery").removeAttr('disabled');
+		$.ajax({
+			url: "capaAjax/compraProcess.php",
+			type: "POST",
+			data: {
+				action:3,
+				delivery: true
+			},
+			success: function(resultado){
+				var result = JSON.parse(resultado);
+				if(result.status)
+				{
+					$('.pagoDespacho').html(num_format(parseInt($(".despachoUnita").html().replace('.',''))*parseInt($(".amountNumber").html())));
+					$('.radioDelivery').val("true");
+					$('.pagoTotal').html(num_format(result.total));
+				}
+				else
+				{
+					alert("Existe un error al procesar la solicitud, Por favor contacte con el soporte tecnico");
+				}
+			}
+		});
+	});
+	$("#NoDelivery").click(function(){
+		$(".direccionDelivery").attr('disabled','disabled');
+		$.ajax({
+			url: "capaAjax/compraProcess.php",
+			type: "POST",
+			data: { 
+				action:3,
+				delivery: false
+			},
+			success: function(resultado){
+				var result = JSON.parse(resultado);
+				if(result.status)
+				{
+					$('.pagoDespacho').html('0');
+					$('.radioDelivery').val("false");
+					$('.pagoTotal').html(num_format(result.total));
+				}
+				else
+				{
+					alert("Existe un error al procesar la solicitud, Por favor contacte con el soporte tecnico");
+				}
+			}
+		});
+	});
+	$(".webpayCreditoImg").click(function(){
 		$.ajax({
 			url: "capaAjax/processSell.php",
 			type: "POST",
 			data:{
-				delivery: ($("input[name='delivery']:checked").attr('value') == "true")?true:false,
-				location: $(".direccionDelivery").val()
+				delivery: ($('.radioDelivery').val() == "true")?true:false,
+				location: $(".direccionDelivery").val(),
+				medio: 0
+			},
+			success: function(resultado){
+				alert(resultado);
+				var method = JSON.parse(resultado);
+				var form = $("<form></form>").attr({
+					"name": "frm",
+					"id": "payForm",
+					"action":"cgi-bin/tbk_bp_pago.cgi",
+					"method":"post" 
+				}).appendTo($('body'));
+				// Creamos los inputs para enviar el valor
+				$('<input type="hidden" name="TBK_TIPO_TRANSACCION" value="TR_NORMAL"  />').appendTo(form);
+				$('<input type="hidden" name="TBK_MONTO" value="'+method.monto+'" />').appendTo(form);
+				$('<input type="hidden" name="TBK_ORDEN_COMPRA" value="'+method.id_transaccion+'" />').appendTo(form);
+				$('<input type="hidden" name="TBK_ID_SESION" value="'+method.id_transaccion+'" />').appendTo(form);
+				$('<input type="hidden" name="TBK_URL_EXITO" value="http://www.cuponperfumes.cl/SellSuccess.php?idT=" />').appendTo(form);
+				$('<input type="hidden" name="TBK_URL_FRACASO" value="http://www.cuponperfumes.cl/SellFail.php" />').appendTo(form);
+				//AÑADIMOS EL FORM AL BODY
+				form.submit();
+			}
+		});
+		
+	});
+	$(".webpayRedCompraImg").click(function(){
+		$.ajax({
+			url: "capaAjax/processSell.php",
+			type: "POST",
+			data:{
+				delivery: ($('.radioDelivery').val() == "true")?true:false,
+				location: $(".direccionDelivery").val(),
+				medio: 1
 			},
 			success: function(resultado){
 				var method = JSON.parse(resultado);

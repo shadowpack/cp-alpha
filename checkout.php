@@ -14,16 +14,16 @@
 </head>
 <body>
 <div class="RowContainer12">
-	<div class="rowHeader"></div>
 	<!-- INTEGRAMOS EL HEADER -->
-	<?php require_once("capaVista/header.php"); ?>
+	<?php include("capaVista/header.php"); ?>
+	<?php include("capaVista/precontent.php"); ?>
 	<div class="row">&nbsp;</div>
 	<!-- INCLUIMOS EL CHECKOUT-->
-	<?php require_once("capaVista/checkout.php"); ?>
-	<!-- INCLUIMOS LA CAPA PRODUCTOS -->
-	<?php require_once("capaVista/catalog.php"); ?>
+	<?php @include("capaVista/checkout.php"); ?>
+	<div class="row">&nbsp;</div>
+	<div class="row">&nbsp;</div>
 	<!-- INCLUIMOS EL FOOTER -->
-	<?php require_once("capaVista/footer.php"); ?>
+	<?php include("capaVista/footer.php"); ?>
 </div>
 </body>
 

@@ -50,7 +50,7 @@
 					<div class="tiempo"> 6h:3m:45s</div>
 					<div class="vendidos">Se han vendido: <?php echo $producto->getSell(); ?> CuponPerfumes de este producto.</div>
 				</div>
-				<div id="compra">Comprar</div>
+				<div id="compra" nP="<?php echo $descripcion['id_item']; ?>">Comprar</div>
 				<div class="social">
 					<div class="Socialbotones">
 						<div class="fb-like" data-href="http://www.cuponperfumes.cl/product.php?id=1" data-send="true" data-layout="button_count" data-width="200" data-show-faces="true" data-font="verdana"></div>
@@ -132,9 +132,10 @@ $(document).ready(function(){
 	});
 	$("#compra").click(function(){
 		$.ajax({
-			url:"capaAjax/addCompra.php",
+			url:"capaAjax/compraProcess.php",
 			type: "POST",
 			data: {
+				action: 0,
 				id: $(this).attr("nP")
 			},
 			success: function(resultado){
