@@ -17,13 +17,15 @@
 </head>
 <body>
 <div class="RowContainer12">
-	<div class="rowHeader"></div>
 	<!-- INTEGRAMOS EL HEADER -->
 	<?php require_once("capaVista/header.php"); ?>
 	<div class="row">&nbsp;</div>
-	<!-- INCLUIMOS LA CAPA PRODUCTOS -->
-	<?php require_once("capaVista/catalog.php"); ?>
+	<div class="row">&nbsp;</div>
+	<!-- INCLUIMOS LA CAPA RESULTADO -->
+	<?php require_once("capaVista/sellSuccess.php"); ?>
 	<!-- INCLUIMOS EL FOOTER -->
+	<div class="row">&nbsp;</div>
+	<div class="row">&nbsp;</div>
 	<?php require_once("capaVista/footer.php"); ?>
 </div>
 </body>

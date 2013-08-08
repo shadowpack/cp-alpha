@@ -53,7 +53,7 @@ class checkout
 						<div class="precioNombre"><img src="'.$con['source'].'" height="80" /></div>
 						<div class="precioDescripcion">
 							<div class="DescripcionTitle">Descripcion del producto</div>
-							<div class="DescripcionContent">'.$con['descripcion_small'].'</div>
+							<div class="DescripcionContent">'.utf8_encode($con['descripcion_small']).'</div>
 						</div>
 						<div class="Cantidad">
 							<div class="CantidadTitle">Cantidad</div>

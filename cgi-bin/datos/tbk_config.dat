@@ -1,5 +1,5 @@
 IDCOMERCIO = 597026007976
-MEDCOM = 1
+MEDCOM = 2
 TBK_KEY_ID = 101
 PARAMVERIFCOM = 1
 URLCGICOM = http://www.cuponperfumes.cl/cgi-bin/tbk_bp_resultado.cgi

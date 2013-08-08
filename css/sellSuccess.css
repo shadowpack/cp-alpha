@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+.sellSuccess{
+	height: 800px;
+	width: 1024px;
+	left: 50%;
+	margin-left: -512px;
+}
+.sellSuccess .sellAll{
+	height: 100%;
+
+}
+.sellSuccess .sellInforme{
+	position: relative;
+	height: 100%;
+	width: 90%;
+	padding: 0% 5% 0% 5%;	
+	background: #fff;
+	border: 1px #CCC solid;
+}
+.sellSuccess .sellInforme .Sellheader{
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	font-size: 20px;
+	font-family: "Helvetica";
+	width: 100%;
+	color: #333;
+	padding:10px 0% 10px 0%;
+	border-bottom: 1px #CCC solid;
+	line-height: 20px 0px 20px 0px;
+}
+.sellSuccess .sellInforme .SellBody{
+	position: relative;
+	height: 920px;
+	width: 100%;
+	padding: 10px 0px 30px 0px;
+}
+.sellSuccess .sellInforme .textLine{
+	float: left;
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	width: 100%;
+	font-size: 17px;
+	color: #666;
+	font-family: "Helvetica";
+}
+.sellSuccess .sellInforme .backButonDiv{
+	float: left;
+	height: 40px;
+	width: 60%;
+	font-size: 17px;
+	color: #666;
+	font-family: "Helvetica";
+	padding: 80px 20% 20px 20%;
+}
+.sellSuccess .sellInforme .ButonDiv{
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	width: 200px;
+	font-size: 17px;
+	color: #666;
+	border-radius: 5px;
+	color:#FFF;
+	font-family: "Helvetica";
+	background: #4AB0E1;
+	text-shadow: -1px -1px 0 #1584FF;
+	cursor: pointer;
+	left: 50%;
+	margin-left: -100px;
+}
+.sellSuccess .sellInforme .textLineheader{
+	float: left;
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	width: 100%;
+	font-size: 16px;
+	color: #666;
+	font-family: "Helvetica";
+	padding: 20px 0px 20px 0px;
+}

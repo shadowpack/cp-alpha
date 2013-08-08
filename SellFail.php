@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start(); 
+	//BORRAMOS EL CARRITO DE LAS VARIABLES DE SESION
+	unset($_SESSION["CuponPerfumes-Sell"]);
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -18,8 +21,11 @@
 	<!-- INTEGRAMOS EL HEADER -->
 	<?php require_once("capaVista/header.php"); ?>
 	<div class="row">&nbsp;</div>
-	<!-- INCLUIMOS LA CAPA PRODUCTOS -->
-	<?php require_once("capaVista/catalog.php"); ?>
+	<div class="row">&nbsp;</div>
+	<!-- INCLUIMOS LA CAPA RESULTADO -->
+	<?php require_once("capaVista/sellSuccess.php"); ?>
+	<div class="row">&nbsp;</div>
+	<div class="row">&nbsp;</div>
 	<!-- INCLUIMOS EL FOOTER -->
 	<?php require_once("capaVista/footer.php"); ?>
 </div>

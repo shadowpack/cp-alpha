@@ -87,7 +87,7 @@
 				</div>
 				<div class="PagoTotal">
 					<div class="PagoTitle">Total a Pagar</div>
-					<div class="PagoContent">$ <span class="pagoTotal">0</span></div>
+					<div class="PagoContent">$ <span class="pagoTotal"><?php echo number_format($total->getTotal(),0,",","."); ?></span></div>
 				</div>
 			</div>
 		</div>
