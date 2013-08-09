@@ -1,6 +1,30 @@
-<?php session_start(); 
-	//BORRAMOS EL CARRITO DE LAS VARIABLES DE SESION
-	unset($_SESSION["CuponPerfumes-Sell"]);
+<?php
+session_cache_limiter('private');
+session_start();
+session_cache_expire(30);
+unset($_SESSION["CuponPerfumes-Sell"]);
+header("Expires: Thu, 27 Mar 1980 23:59:00 GMT"); //la pagina expira en una fecha pasadaheader 
+header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); //ultima actualizacion ahora cuando la cargamos
+header("Cache-Control: no-cache, must-revalidate"); //no guardar en CACHE
+header("Pragma: no-cache");
+include('model/db_core.php');
+$db =  new db_core();
+if(isset($_SESSION['id']))
+{
+	$consulta = $db->num_one("SELECT * FROM sesion_log WHERE session_log.token='".$_SESSION['token']."'"); 
+	if($consulta <= 0)
+	{
+		header ("Location: loginreg.php?next=".dameURL());
+	}
+}
+else
+{
+	header ("Location: loginreg.php?next=".dameURL());
+}
+function dameURL(){
+$url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+return $url;
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

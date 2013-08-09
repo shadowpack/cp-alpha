@@ -133,3 +133,48 @@
 	margin-top: -40px;
 	cursor: pointer;
 }
+.account .lineData{
+	float: left;
+	height: 30px;
+	width: 95%;
+	padding: 15px 2.5% 15px 2.5%;
+	color:#666;
+	font-family: "Helvetica";
+	font-size: 16px;
+}
+.account .lineDataUp{
+	float: left;
+	height: 10px;
+	width: 95%;
+	padding: 10px 2.5% 0px 2.5%;
+}
+.account .inputText{
+	height: 30px;
+	width: 500px;
+}
+.account .butonChange{
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	width: 200px;
+	font-size: 17px;
+	color: #666;
+	border-radius: 5px;
+	color:#FFF;
+	font-family: "Helvetica";
+	background: #4AB0E1;
+	text-shadow: -1px -1px 0 #1584FF;
+	cursor: pointer;
+}
+.account .lineMessage{
+	float: left;
+	height: 30px;
+	width: 95%;
+	padding: 15px 2.5% 15px 2.5%;
+	color:#666;
+	font-family: "Helvetica";
+	font-size: 16px;
+	display: none;
+}

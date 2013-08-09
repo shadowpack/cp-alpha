@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+.loginreg{
+	height: 800px;
+	width: 1024px;
+	left: 50%;
+	margin-left: -512px;
+}
+.loginreg .loginregAll{
+	height: 100%;
+}
+.loginreg .loginregChar{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: #fff;
+	border: 1px #CCC solid;
+	overflow: hidden;
+}
+.loginreg .tab-changepass{
+
+}
+.loginreg .lineDataUp{
+	float: left;
+	height: 10px;
+	width: 95%;
+	padding: 10px 2.5% 0px 2.5%;
+}

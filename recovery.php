@@ -18,12 +18,9 @@
 	<?php require_once("capaVista/header.php"); ?>
 	<?php require_once("capaVista/precontent.php"); ?>
 	<div class="row">&nbsp;</div>
-	<!-- INCLUIMOS LA CAPA PRODUCTOS -->
-	<?php require_once("capaVista/product.php"); ?>
-	<!-- INCLUIMOS LA CAPA PRODUCTOS -->
-	<?php require_once("capaVista/catalog.php"); ?>
+	<!-- INCLUIMOS LA CAPA DE RECOVERY -->
+	<?php require_once("capaVista/recovery.php"); ?>
 	<!-- INCLUIMOS EL FOOTER -->
-	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
 	<?php require_once("capaVista/footer.php"); ?>
 </div>

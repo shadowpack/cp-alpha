@@ -1,0 +1,67 @@
+.recovery{
+	height: 800px;
+	width: 1024px;
+	left: 50%;
+	margin-left: -512px;
+}
+.recovery .recoveryAll{
+	height: 100%;
+}
+.recovery .recoveryChar{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: #fff;
+	border: 1px #CCC solid;
+	overflow: hidden;
+}
+.recovery .tab-changepass{
+
+}
+.recovery .lineDataUp{
+	float: left;
+	height: 10px;
+	width: 95%;
+	padding: 10px 2.5% 0px 2.5%;
+}
+.recovery .lineData{
+	float: left;
+	height: 30px;
+	width: 95%;
+	padding: 15px 2.5% 15px 2.5%;
+	color:#666;
+	font-family: "Helvetica";
+	font-size: 16px;
+}
+.recovery .lineMessage{
+	float: left;
+	height: 30px;
+	width: 95%;
+	padding: 15px 2.5% 15px 2.5%;
+	color:#666;
+	font-family: "Helvetica";
+	font-size: 16px;
+	display: none;
+}
+.recovery .lineProduct{
+	float: left;
+	height: 100px;
+	width: 95%;
+	padding: 20px 2.5% 20px 2.5%;
+}
+.recovery .butonChange{
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	width: 200px;
+	font-size: 17px;
+	color: #666;
+	border-radius: 5px;
+	color:#FFF;
+	font-family: "Helvetica";
+	background: #4AB0E1;
+	text-shadow: -1px -1px 0 #1584FF;
+	cursor: pointer;
+}

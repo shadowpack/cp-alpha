@@ -1,5 +1,5 @@
 <?php
-include("model/db_core.php");
+@include("model/db_core.php");
 class account{
 	var $db;	
 	function account(){
@@ -16,7 +16,7 @@ class account{
 				<div class="lineProductImg"><img src="'.$consulta[1]['source'].'" height="100px" width="150px" /></div>
 				<div class="desProductImg">
 					<div class="TitleTab">Descripcion del Cupon</div>
-					<div class="ContentTab">'.$consulta[1]['descripcion_small'].'</div>
+					<div class="ContentTab">'.utf8_encode($consulta[1]['descripcion_small']).'</div>
 				</div>
 				<div class="expirationTime">
 					<div class="TitleTab">Fecha de Expiracion</div>
@@ -39,6 +39,30 @@ class account{
 			LEFT JOIN transacciones ON transacciones.id_producto=p.id_item 
 			INNER JOIN imagenes_productos ON imagenes_productos.id_item = p.id_item
 			WHERE transacciones.id_user='".$_SESSION['id']."' AND transacciones.statusPay='1' AND p.expiracion < ".time().";");
+	}
+	function changePassword(){
+		$consulta = $this->db->num_one("SELECT * FROM users as u WHERE u.id_user='".$_SESSION['id']."' AND u.password='".md5($_POST['password'])."'");
+		if($consulta > 0)
+		{
+			$this->db("UPDATE users SET users.password='".md5($_POST['newpassword'])."' WHERE users.id_user='".$_SESSION['id']."'");
+			echo "true";
+		}
+		else
+		{
+			echo "ErrorPassword";
+		}
+	}
+	function recoveryPassword($token, $password){
+		$consulta = $this->db->num_one("SELECT * FROM users as u WHERE u.recoverToken='".base64_decode($token)."'");
+		if($consulta > 0)
+		{
+			$this->db("UPDATE users SET users.password='".md5($password)."', users.token='' WHERE u.recoverToken='".base64_decode($token)."'");
+			echo "true";
+		}
+		else
+		{
+			echo "ErrorToken";
+		}
 	}
 }
 ?>

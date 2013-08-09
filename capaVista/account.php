@@ -9,17 +9,25 @@
 			
 			<div class="headerbtn">
 				<div class="btn" id="cupones">Mis Cupones</div>
-				<div class="btn" id="data">Cambiar Datos</div>
 				<div class="btn" id="changepass">Cambiar Contraseña</div>
 			</div>
 			<div class="tab-cupones tabsA">
 				<div class="botonUp"><img src="img/1downarrow.png" /></div>
 				<div class="botonDown"><img src="img/1downarrow1.png" /></div>
 				<div class="productAccount" num="<?php echo $cupones->getNumCupones(); ?>" numA="5">
+					<?php echo $cupones->getCupones(); ?>
 				</div>
 			</div>
-			<div class="tab-changedata tabsA"></div>
-			<div class="tab-changepass tabsA"></div>
+			<div class="tab-changepass tabsA">
+				<div class="lineDataUp"></div>
+				<div class="lineData">Realiza un cambio de tu contraseña de acceso. Se recomienda efectuar cada cierto tiempo</div>
+				<div class="lineData"><input class="inputText" id="oldpass" placeholder="Contraseña Actual"/></div>
+				<div class="lineData"><input class="inputText" id="newpass" placeholder="Nueva Contraseña"/></div>
+				<div class="lineData"><input class="inputText" id="repeatnewpass" placeholder="Repite Nueva Contraseña"/></div>
+				<div class="lineMessage"></div>
+				<div class="lineProduct"><div class="butonChange">Cambiar Contraseña</div></div>
+				
+			</div>
 		</div>
 	</div>
 </div>
@@ -41,12 +49,6 @@ $(document).ready(function(){
 			$(value).hide();
 		});
 		$(".tab-cupones").show();
-	});
-	$('#data').click(function(){
-		$(".tabsA").each(function(key,value){
-			$(value).hide();
-		});
-		$(".tab-changedata").show();
 	});
 	$('#changepass').click(function(){
 		$(".tabsA").each(function(key,value){
@@ -71,6 +73,33 @@ $(document).ready(function(){
 				$(element).prependTo($('.productAccount'));
 				$('.productAccount').attr('numA',(parseInt($('.productAccount').attr('numA')) + 1));
 			}
-	});                         
+	});  
+	$('.butonChange').click(function(){
+		if($("#oldpass").val() != "" && $("#newpass").val() != "" && $("#repeatnewpass").val() != "")
+		{
+			$.ajax({
+				url: "capaAjax/changePassword.php",
+				type: "POST",
+				data:{
+					password: $("#oldpass").val(),
+					newpassword: $("#newpass").val()
+				}
+				success: function(resultado){
+					if(resultado == "true")
+					{
+						$(".lineMessage").html("La contraseña fue cambiada con Exito.").show();
+					}
+					else if(resultado == "ErrorPassword")
+					{
+						$(".lineMessage").html("La contraseña ingresada no es valida, por favor intente otra vez").show();
+					}
+				}
+			});
+		}
+		else
+		{
+			$(".lineMessage").html("Debe completar todos los campos antes de continuar.").show();
+		}
+	});                       
 });
 </script>
