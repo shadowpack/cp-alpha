@@ -12,7 +12,7 @@
 			</div>
 			<div class="SellBody">
 				<span class="textLineheader">La operación de compra ha fracasado, vuelva a intentarlo mas tarde. Estos son los datos de la transaccion Transbank y CuponPerfumes</span>
-				<span class="textLine">Id del cliente : <?php echo $SESSION['id']; ?></span>
+				<span class="textLine">Id del cliente : <?php echo $_SESSION['id']; ?></span>
 				<span class="textLine">Codigo de Transaccion : <?php echo $data_info['TBK_ORDEN_COMPRA']; ?></span>
 				<span class="textLine">Monto de Transaccion : <?php echo $data_info['TBK_MONTO']; ?></span>
 				<span class="textLine">Codigo Autorizacion Transbank : <?php echo $data_info['TBK_CODIGO_AUTORIZACION']; ?></span>
@@ -34,7 +34,7 @@
 <script>
 $(document).ready(function(){
 	$('.ButonDiv').click(function(){
-		location.href="Acount.php";
+		location.href="account.php";
 	});
 });
 </script>

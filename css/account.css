@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+.account{
+	height: 800px;
+	width: 1024px;
+	left: 50%;
+	margin-left: -512px;
+}
+.account .accountAll{
+	height: 100%;
+}
+.account .accountChar{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: #fff;
+	border: 1px #CCC solid;
+	overflow: hidden;
+}
+.account .headerbtn{
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	vertical-align: middle;
+	font-family: "Helvetica";
+	font-size: 18px;
+	border-bottom: 1px #CCC solid;
+	background: url("../img/bg-degrade1.jpg") repeat-x 0 0;
+}
+.account .headerbtn .btn{
+	float: left;
+	color: #666;
+	width: 200px;
+	font-size: 15px;
+	text-align: center;
+	border-right: 1px #CCC solid; 
+	cursor: pointer;
+}
+.account .tab-cupones{
+	float: left;
+	height: 720px;
+	width: 100%;
+	padding: 20px 0px 0px 0px;
+	overflow: hidden;
+}
+.account .tab-changedata{
+	float: left;
+	height: 730px;
+	width: 100%;
+	display: none;
+}
+.account .tab-changepass{
+	float: left;
+	height: 760px;
+	width: 100%;
+	display: none;
+}
+.account .lineProduct{
+	float: left;
+	height: 100px;
+	width: 95%;
+	padding: 20px 2.5% 20px 2.5%;
+}
+.account .lineProductImg{
+	float: left;
+	height: 100px;
+	width: 180px;
+	border-right: 1px #CCC dashed; 
+}
+.account .desProductImg{
+	float: left;
+	height: 100px;
+	width: 300px;
+	border-right: 1px #CCC dashed; 
+}
+.account .TitleTab{
+	height: 25px;
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	font-family: "Helvetica";
+	padding: 10px 0px 0px 0px;
+}
+.account .ContentTab{
+	height: 45px;
+	float: left;
+	width: 95%;
+	text-align: center;
+	font-size: 11px;
+	color: #333;
+	font-family: "Helvetica";
+	padding: 0px 2.5% 0px 2.5%;
+}
+.account .expirationTime{
+	float: left;
+	height: 100px;
+	width: 180px;
+	border-right: 1px #CCC dashed; 
+}
+.account .seeMore{
+	float: left;
+	height: 100px;
+	width: 150px;
+	border-right: 1px #CCC dashed;
+}
+.account .mailCupon{
+	float: left;
+	height: 100px;
+	width: 150px;
+}
+.account .buttonImg{
+	cursor: pointer;
+}
+.account .botonUp{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	left: 100%;
+	margin-left: -30px;
+	top:55px;
+	cursor: pointer;
+}
+.account .botonDown{
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	left: 100%;
+	margin-left: -30px;
+	top:100%;
+	margin-top: -40px;
+	cursor: pointer;
+}

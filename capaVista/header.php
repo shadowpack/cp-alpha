@@ -225,20 +225,8 @@
             });
         });
         //EVENTO MI CUENTA
-        $("#accout").click(function(){
-        	 $.ajax({
-                url: 'capaAjax/logoutUser.php',
-                type: 'POST',
-                data: {
-                },
-                success: function(resultado){
-                	var result = JSON.parse(resultado);
-                	if(result.status)
-                	{
-                		location.reload();	
-                	}
-                }
-            });
+        $("#account").click(function(){
+        	 location.href="account.php";
         });
         //EVENTO DE REGISTRAR EL CORREO
         $("#mailing-input-btn").click(function(){
