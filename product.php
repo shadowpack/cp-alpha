@@ -16,12 +16,11 @@
 <div class="RowContainer12">
 	<!-- INTEGRAMOS EL HEADER -->
 	<?php require_once("capaVista/header.php"); ?>
-	<?php require_once("capaVista/precontent.php"); ?>
 	<div class="row">&nbsp;</div>
 	<!-- INCLUIMOS LA CAPA PRODUCTOS -->
+	<?php require_once("capaVista/noprecontent.php"); ?>
 	<?php require_once("capaVista/product.php"); ?>
 	<!-- INCLUIMOS LA CAPA PRODUCTOS -->
-	<?php require_once("capaVista/catalog.php"); ?>
 	<!-- INCLUIMOS EL FOOTER -->
 	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>

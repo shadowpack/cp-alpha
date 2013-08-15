@@ -3,8 +3,11 @@
 	<div class="col12 recoveryAll">
 		<div class="recoveryChar">
 			<div class="tab-changepass tabsA">
+				<div class="TitleTab">
+					<div class="figura">1</div>
+					<div class="titleBody">Recupera tu contraseña</div>
+				</div>
 				<div class="lineDataUp"></div>
-				<div class="lineData">Recupera tu contraseña</div>
 				<div class="lineData"><input class="inputText" id="newpass" placeholder="Nueva Contraseña"/></div>
 				<div class="lineData"><input class="inputText" id="repeatnewpass" placeholder="Repite Nueva Contraseña"/></div>
 				<div class="lineMessage"></div>
@@ -26,7 +29,7 @@ $(document).ready(function(){
 					token: getUrlVars()["recovertoken"],
 					recovery: "true",
 					password: $("#newpass").val()
-				}
+				},
 				success: function(resultado){
 					if(resultado == "true")
 					{

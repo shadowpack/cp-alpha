@@ -1,5 +1,5 @@
 .recovery{
-	height: 800px;
+	height: 550px;
 	width: 1024px;
 	left: 50%;
 	margin-left: -512px;
@@ -17,6 +17,35 @@
 }
 .recovery .tab-changepass{
 
+}
+.recovery .TitleTab{
+	height: 50px;
+	float: left;
+	width: 775px;
+	font-size: 22px;
+	line-height: 50px;
+	vertical-align: middle;
+	color: #4AB0E1;
+	font-family: "Helvetica";
+	padding: 10px 0px 10px 25px; 
+}
+.recovery .figura{
+	float: left;
+	height: 35px;
+	width: 35px;
+	border-radius: 20px;
+	background: #4AB0E1;
+	text-align: center;
+	line-height: 35px;
+	vertical-align: middle;
+	font-size: 18px;
+	color: #FFF;
+	font-weight: bold;
+	margin-top: 7.5px;
+}
+.recovery .titleBody{
+	float: left;
+	padding: 0px 0px 0px 10px;
 }
 .recovery .lineDataUp{
 	float: left;
@@ -64,4 +93,8 @@
 	background: #4AB0E1;
 	text-shadow: -1px -1px 0 #1584FF;
 	cursor: pointer;
+}
+.recovery .inputText{
+	height: 25px;
+	width: 50%;
 }

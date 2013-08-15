@@ -38,14 +38,12 @@
 </div>
 <div class="rowAll menu">
 	<div class="row menu">
-		<div class="col2"><div class="allSpace"><div class="btnMenu" id="destacados">Destacados</div></div></div>
-		<div class="col2">&nbsp;</div>
+		<div class="col2"><div class="allSpace btnmenus"><div class="btnMenu" id="ofertas">Ofertas</div></div></div>
+		<div class="col2"><div class="allSpace btnmenus"><div class="btnMenu" id="destacados">Destacados</div></div></div>
 		<div class="col2">&nbsp;</div>
 	</div>
 </div>
 <div class="rowAll submenu">&nbsp;</div>
-
-
 <!-- FORMULARIO MODAL DE INGRESO O REGISTRO DE USUARIO -->
 <div id="joinModal" class="joinModal">
     <input type="text" id="user" class="input" placeholder="E-Mail"/>
@@ -55,93 +53,63 @@
     <input type="button" id="login" class="login_btn" value="Ingresar"/>
 </div>
 <!-- FORMULARIO MODAL DE REGISTRO -->
-<div class="regModal">
-	<div id="regClose"></div>
-	<div id="regBody">
-		<div class="RowContainer12fixed">
-			<div class="col12"><div class="titleDiv"><img src="img/img-form-reg.png" class="regImgTitle"/><div class="regTitle">Registra una cuenta en CuponPerfumes</div></div></div>
-			<div class="first col12"><div class="regEsp">&nbsp;</div></div>
-			<div id="regDatum">
-				<div class="first col6"><div class="inputdiv"><input type="text" placeholder="Nombre Completo" class="inputReg" id="regName"/></div></div>
-				<div class="col6">
-					<div class="col1">&nbsp;</div>
-					<div class="col11">
-					<div class="inputdiv"><input type="text" placeholder="Direccion" class="inputReg" id="regLocation"/></div>
-					</div>
-				</div>
-				<div class="first col6"><div class="inputdiv"><input type="text" placeholder="Comuna" class="inputReg" id="regComuna"/></div></div>
-				<div class="col6">
-					<div class="col1">&nbsp;</div>
-					<div class="col11">
-					<div class="inputdiv"><input type="text" placeholder="Ciudad" class="inputReg" id="regCity"/></div>
-					</div>
-				</div>
-				<div class="first col12"><div class="inputdiv">
-					<select class="optionReg" id="regGenero"/>
-						<option value="0">Genero</option>
-						<option value="1">Masculino</option>
-						<option value="2">Femenino</option>
-					</select>
-				</div></div>
-				<div class="first col12"><div class="inputdiv"><input type="text" placeholder="E-Mail" class="inputReg" id="regEmail"/></div></div>
-				<div class="first col12"><div class="inputdiv"><input type="password" placeholder="Contraseña" class="inputReg" id="regPassword"/></div></div>
-				<div class="first col12"><div class="inputdiv"><input type="password" placeholder="Repite tu Contraseña" class="inputReg" id="regRePassword"/></div></div>
-				<div class="first col12"><div class="checkDiv"><input type="checkbox" id="checkReg"/><div id="reg-checkReg">Acepto las condiciones y la política de privacidad</div></div></div>
-				<div class="first col12"><div class="btndiv"><input type="button" id="btnReg" value="Registrar"/></div></div>
-			</div>
-			<div id="postDatum">
-				<div class="col12">
-					<div class="postDatum-text">Felicitaciones, te has registrado con exito en CuponPerfumes.cl</br></br>
-						Como ultimo paso te hemos enviado un correo con instrucciones para activar tu cuenta.</br>
-						</br> 
-						Equipo CuponPerfumes.cl
 
-					</div>
-				</div>
-				<div class="col12">&nbsp;</div>
-				<div class="col12">
-					<img src="img/landind_logo.png"/>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 <!-- RECUPERAR PASSWORD -->
 <div class="recoverPassword">
-	<div id="recoverClose"></div>
-	<div id="recoverBody">
-		<div class="RowContainer12fixed">
-			<div class="row">
-				<div class="col12"><div class="titleDiv"><img src="img/img-form-reg.png" class="regImgTitle"/><div class="regTitle">Recuperar Contraseña</div></div></div>
-				<div class="first col12"><div class="regEsp">&nbsp;</br></div></div>
-				<div id="recoverDatum">
-					<div class="first col12"><div class="recoverDescript">Ingrese el E-Mail asociado a su cuenta.</div></div>
-					<div class="first col12"><div class="regEsp">&nbsp;</div></div>
-					<div class="first col12"><div class="inputdiv"><input type="text" placeholder="E-mail" class="inputReg" id="recoverEmail"/></div></div>
-					<div class="first col12"><div class="checkDiv"><input type="checkbox" id="checkRecover"/><div id="reg-checkRecover">Acepto las condiciones y la política de privacidad</div></div></div>
-					<div class="first col12"><div class="btndiv"><input type="button" id="btnRecover" value="Recuperar"/></div></div>
-				</div>
-				<div id="postRecoverDatum">
-					<div class="col12">
-						<div class="postDatum-text">Hemos enviado un E-mail con las instrucciones que debes seguir.</br></br>
-							A traves de este proceso tu contraseña sera restablecida y redefinida.</br>
-							</br></br> 
-							<b>Equipo CuponPerfumes.cl</b>
-
-						</div>
-					</div>
-					<div class="col12">&nbsp;</div>
-					<div class="col12">
-					</div>
-				</div>
-			</div>
+	<div id="recoverDatum">
+		<div class="TitleTab">
+			<div class="figura">1</div>
+			<div class="titleBody">Recuperar Contraseña</div>
+			<div class="close" id="closeBtnRecover"></div>
 		</div>
+		<div class="lineDataUp"></div>
+		<div class="lineData">Ingrese el E-Mail asociado a su cuenta.</div>
+		<div class="lineData"><input type="text" placeholder="E-mail" class="inputReg" id="recoverEmail"/></div>
+		<div class="lineData"><input type="checkbox" id="checkRecover"/><div id="reg-checkRecover">Acepto las condiciones y la política de privacidad</div></div>
+		<div class="lineData"><div class="btndiv"><input type="button" id="btnRecover" value="Recuperar"/></div></div>
 	</div>
+	<div id="postRecoverDatum">
+		<div class="TitleTab">
+			<div class="figura">2</div>
+			<div class="titleBody">Continuar Proceso</div>
+			<div class="close" id="closeBtnRecover"></div>
+		</div>
+		<div class="lineDataUp"></div>
+		<div class="lineData">Hemos enviado un E-mail con las instrucciones que debes seguir.</br></br>
+		A traves de este proceso tu contraseña sera restablecida y redefinida.</br>
+		</br></br> 
+		<b>Equipo CuponPerfumes.cl</b></div>
+	</div>
+</div>
+<div class="modalAccount">
+	<div class="menuoptionimg"><img src="img/view_text.png" class="imgMenuAco"/></div>
+	<div class="menuoption" id="myCupon">Mis Cupones</div>
+	<div class="menuoptionimg"><img src="img/exec.png" class="imgMenuAco"/></div>
+	<div class="menuoption" id="changePassword">Cambiar Contraseña</div>
+	<div class="lastmenuoptionimg"><img src="img/endturn.png" class="imgMenuAco"/></div>
+	<div class="lastmenuoption" id="closeSesion">Cerrar Sesion</div>
 </div>
 <!-- SCRIPTS -->
 <script type="text/javascript">
     $(document).ready(function(){
         //EVENTO DE CLICK DEL BOTON INGRESAR
+        $("#myCupon").click(function(){
+        	location.href="account.php?section=cupon";
+        });
+        $("#changePassword").click(function(){
+        	location.href="account.php?section=password";
+        });
+        $("#closeSesion").click(function(){
+        	 $.ajax({
+	                url: 'capaAjax/logoutUser.php',
+	                type: 'POST',
+	                data: {
+	                },
+	                success: function(resultado){
+	                	location.href="catalog.php"
+	                }
+	            });
+        });
         $("#join").click(function(){
             if($(this).data('active') == true)
             {
@@ -172,13 +140,6 @@
 		        })
             }
         })
-        //EVENTO DE CLICK DEL BOTON REGISTRAR
-        $("#createPassword").click(function(){
-            var action = new $.esential();
-            action.modalWindows($(".regModal"), $("#regClose"));
-            $("#regDatum").show();
-            $("#postDatum").hide();
-        });
         //EVENTO DE LOGIN
         $("#login").click(function(){
             if(($("#user").val() != '' && $("#password").val() != '') && ($("#user").val() != 'E-Mail' && $("#password").val() != 'Password'))
@@ -226,7 +187,11 @@
         });
         //EVENTO MI CUENTA
         $("#account").click(function(){
-        	 location.href="account.php";
+        	$(".modalAccount").css({
+        		left: $("#account").offset().left-$(this).width()+"px",
+        		top: $("#account").offset().top+ $("#account").height()+"px"
+        	})
+        	$(".modalAccount").show();
         });
         //EVENTO DE REGISTRAR EL CORREO
         $("#mailing-input-btn").click(function(){
@@ -271,81 +236,11 @@
 			}
         });
 		//BOTON PARA REGISTRAR USUARIO
-		$('#btnReg').click(function(){
-			if($('#regName').val() != '' && $('#regLocation').val() != '' && $('#regCity').val() != '' && $('#regGenero').val() != '' && $('#regEmail').val() != '' && $('#regPassword').val() != '' && $('#regRePassword').val() != '' && $('#checkReg').attr('checked'))
-			{
-				if(validarEmail($('#regEmail').val()))
-				{
-					if($('#regPassword').val() == $('#regRePassword').val())
-					{
-						$.ajax({
-			                url: 'capaAjax/regUser.php',
-			                type: 'POST',
-			                data: {
-			                	name: $('#regName').val(),
-			                	comuna: $('#regComuna').val(),
-			                	location: $('#regLocation').val(),
-			                	city: $('#regCity').val(),
-			                	genero: $('#regGenero').val(),
-			                	email: $('#regEmail').val(),
-			                	password: $("#regPassword").val()
-			                },
-			                success: function(resultado){
-			                	var result = JSON.parse(resultado);
-			                	if(result.status == 1)
-			                	{
-								    $("#regDatum").hide();
-						            $("#postDatum").show();
-			                	}
-			                	else if(result.status == 2)
-			                	{
-
-			                	}
-			                	else if(result.status == 3)
-			                	{
-
-			                	}
-			                	else if(result.status == 4)
-			                	{
-
-			                	}
-			                	else
-			                	{
-
-			                	}
-			                }
-			            });
-					}
-					else
-					{
-						alert('Las contraseñas indicadas no coinciden.');
-					}
-				}
-				else
-				{
-					alert('Debe indicar un E-Mail valido.')
-				}
-			}
-			else
-			{
-				alert('Debes Completar los datos y aceptar las condiciones y terminos de uso');
-			}
-			function validarEmail(email) {
-			    var expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-			    if (expr.test(email))
-			    {
-			        return true;
-				}
-				else
-				{
-					return false;
-				}
-			}
-		});
+		
 		//RECOVERY PASSWORD
 		$("#forgotPassword").click(function(){
 			var action = new $.esential();
-            action.modalWindows($(".recoverPassword"), $("#recoverClose"));
+            action.modalWindows($(".recoverPassword"), $("#closeBtnRecover"));
             $("#recoverDatum").show();
     		$("#postRecoverDatum").hide();
 		});
@@ -361,6 +256,7 @@
 		                	email: $('#recoverEmail').val()
 		                },
 		                success: function(resultado){
+		                	alert(resultado);
 		                	var result = JSON.parse(resultado);
 		                	if(result.status == 1)
 		                	{
@@ -410,5 +306,16 @@
 			
 			
 		});
+		$("#ofertas").click(function(){
+			location.href="catalog.php?oferta=1"
+		});
+		$("#createPassword").click(function(){
+			location.href="loginreg.php"
+		});
+		$("#closeBtnRecover").click(function(){
+			$(".back").fadeOut();
+			$(".recoverPassword").fadeOut();
+		});
+
     });
 </script>

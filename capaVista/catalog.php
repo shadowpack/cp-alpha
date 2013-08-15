@@ -19,6 +19,18 @@ else
 $(window).load(function(){
 	var catalogo = new $.catalogo();
 	catalogo._createCatalog();
+	if(getUrlVars()["oferta"]!=1)
+	{
+		$(".precontent").data("active",true);
+		$(".precontent").fadeIn();
+	}
+	function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			vars[key] = value;
+		});
+		return vars;
+	};
 });
 </script>
 <script type="text/javascript" src="capaControlador/screen.js"></script>

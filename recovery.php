@@ -16,11 +16,13 @@
 <div class="RowContainer12">
 	<!-- INTEGRAMOS EL HEADER -->
 	<?php require_once("capaVista/header.php"); ?>
-	<?php require_once("capaVista/precontent.php"); ?>
+	<?php require_once("capaVista/noprecontent.php"); ?>
+	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
 	<!-- INCLUIMOS LA CAPA DE RECOVERY -->
 	<?php require_once("capaVista/recovery.php"); ?>
 	<!-- INCLUIMOS EL FOOTER -->
+	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
 	<?php require_once("capaVista/footer.php"); ?>
 </div>

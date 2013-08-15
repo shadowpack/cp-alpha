@@ -42,7 +42,7 @@ return $url;
 <div class="RowContainer12">
 	<!-- INTEGRAMOS EL HEADER -->
 	<?php include("capaVista/header.php"); ?>
-	<?php include("capaVista/precontent.php"); ?>
+	<?php require_once("capaVista/noprecontent.php"); ?>
 	<div class="row">&nbsp;</div>
 	<!-- INCLUIMOS EL CHECKOUT-->
 	<?php @include("capaVista/checkout.php"); ?>

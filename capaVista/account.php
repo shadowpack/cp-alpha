@@ -33,6 +33,26 @@
 </div>
 <script>
 $(document).ready(function(){
+	if(getUrlVars()["section"] == "password"){
+		$(".tabsA").each(function(key,value){
+			$(value).hide();
+		});
+		$(".tab-changepass").show();
+	}
+	else
+	{
+		$(".tabsA").each(function(key,value){
+			$(value).hide();
+		});
+		$(".tab-cupones").show();
+	};
+	function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			vars[key] = value;
+		});
+		return vars;
+	};
 	$.fn.pop = function() {
 	    var top = this.get(-1);
 	    this.splice(this.length-1,1);
@@ -83,7 +103,7 @@ $(document).ready(function(){
 				data:{
 					password: $("#oldpass").val(),
 					newpassword: $("#newpass").val()
-				}
+				},
 				success: function(resultado){
 					if(resultado == "true")
 					{

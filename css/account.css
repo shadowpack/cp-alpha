@@ -61,6 +61,9 @@
 	height: 100px;
 	width: 95%;
 	padding: 20px 2.5% 20px 2.5%;
+	font-size: 14px;
+	color: #333;
+	font-family: "Helvetica";
 }
 .account .lineProductImg{
 	float: left;

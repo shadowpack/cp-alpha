@@ -4,6 +4,7 @@
 	position: relative;
 	height: 190px;
 	background: url('../img/tweed.png');
+	display: none;
 }
 .precontent .subline{
 	height: 1px;

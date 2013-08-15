@@ -271,6 +271,7 @@ $(document).ready(function(){
 		});
 		
 	});
+
 	var num_format = function(num){
 		var cadena = ""; var aux;  
 		var cont = 1,m,k;  

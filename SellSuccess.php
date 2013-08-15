@@ -46,6 +46,7 @@ return $url;
 	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
 	<!-- INCLUIMOS LA CAPA RESULTADO -->
+	<?php require_once("capaVista/noprecontent.php"); ?>
 	<?php require_once("capaVista/sellSuccess.php"); ?>
 	<!-- INCLUIMOS EL FOOTER -->
 	<div class="row">&nbsp;</div>

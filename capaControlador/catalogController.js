@@ -29,7 +29,7 @@ $.item = function(settings){
 	this._createView = function ()
 	{
 		//DIVS PRINCIPALES
-		var bigcatalog = $('<div></div>').addClass("bigCatalog");
+		var bigcatalog = $('<div></div>').addClass("bigCatalog").addClass('listCategory'+atributos.category);
 		var container = $('<div></div>').addClass("container").appendTo(bigcatalog);
 		var header = $('<div></div>').addClass("header").appendTo(container);
 		var image = $('<div></div>').addClass("image").appendTo(container).html('<img src="'+atributos.img+'" class="img"/>');

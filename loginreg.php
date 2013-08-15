@@ -16,7 +16,7 @@
 <div class="RowContainer12">
 	<!-- INTEGRAMOS EL HEADER -->
 	<?php require_once("capaVista/header.php"); ?>
-	<?php require_once("capaVista/precontent.php"); ?>
+	<?php require_once("capaVista/noprecontent.php"); ?>
 	<div class="row">&nbsp;</div>
 	<!-- INCLUIMOS LA CAPA LOGINREG -->
 	<?php require_once("capaVista/loginreg.php"); ?>

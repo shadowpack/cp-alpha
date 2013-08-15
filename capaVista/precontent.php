@@ -11,7 +11,7 @@
 				$consulta[0] = $db->query("SELECT * FROM category as c ORDER BY c.position");
 				while($consulta[1] = mysql_fetch_array($consulta[0]))
 				{
-					echo '<div class="imageItem"><img src="'.$consulta[1][2].'" class="imagelider" position="'.$consulta[1][3].'"/></div>'; //de ser un directorio lo envolvemos entre corchetes
+					echo '<div class="imageItem"><img src="'.$consulta[1][2].'" class="imagelider" position="'.$consulta[1][3].'" numCat="'.$consulta[1][0].'"/></div>'; //de ser un directorio lo envolvemos entre corchetes
 				}
 			?>
 			</div>
@@ -42,7 +42,7 @@ $(document).ready(function(){
 		next:$('.btn_next')
 	});
 	$(".imagelider").click(function(){
-		var num = $(".items").offset().top+30+460*($(this).attr('position')-1);
+		var num = $(".listCategory"+$(this).attr('numCat')).offset().top;
 		$(document).scrollTop(num);
 	});
 	

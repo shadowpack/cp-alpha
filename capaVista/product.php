@@ -28,8 +28,8 @@
 						}
 					?>
 					</div>
-					<div class="btn_prev"><img src="Addons/slider/img/btn_prev.png" /></div>
-					<div class="btn_next"><img src="Addons/slider/img/btn_next.png" /></div>
+					<div class="btn_prev" id="sliderfoto_prev"><img src="Addons/slider/img/btn_prev.png" /></div>
+					<div class="btn_next" id="sliderfoto_next"><img src="Addons/slider/img/btn_next.png" /></div>
 				</div>
 			</div>
 			<div class="datos">
@@ -99,8 +99,8 @@ $(document).ready(function(){
 		object: $('.sliderImg'),
 		images: $('.imagesMov'),
 		img: '.imgSlider',
-		prev: $('.btn_prev'),
-		next:$('.btn_next')
+		prev: $('#sliderfoto_prev'),
+		next:$('#sliderfoto_next')
 	})
 	var contador = setInterval(function(){
 		var tiempo = new Date;
